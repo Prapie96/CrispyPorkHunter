@@ -7,7 +7,7 @@ import { Dispatch, SetStateAction } from "react";
 interface MapBoxProps {
   shops: Poi[];
   selected: Poi | null;
-  setSelected: Dispatch<SetStateAction<Poi | null>>;
+  onSelected: Dispatch<SetStateAction<Poi | null>>;
   viewState: InitialLocationType;
   setViewState: Dispatch<SetStateAction<InitialLocationType>>;
 }
@@ -15,11 +15,12 @@ interface MapBoxProps {
 export default function MapBox({
   shops,
   selected,
-  setSelected,
+  onSelected,
   viewState,
   setViewState,
 }: MapBoxProps) {
- 
+  const isSelectedInShops = shops.some((shop) => shop.key === selected?.key);
+
   return (
     <Map
       {...viewState}
@@ -28,7 +29,6 @@ export default function MapBox({
       mapStyle="mapbox://styles/mapbox/streets-v9"
       onMove={(e) => setViewState(e.viewState)}
       cursor="default"
-     
     >
       {shops.map((shop) => (
         <Marker
@@ -38,7 +38,12 @@ export default function MapBox({
           anchor="bottom"
           onClick={(e) => {
             e.originalEvent.stopPropagation();
-            setSelected(shop);
+            onSelected(shop);
+            setViewState({
+              latitude: shop.location.lat,
+              longitude: shop.location.lng,
+              zoom: 15,
+            });
             console.log("Selected Pin Shop : ", shop);
           }}
         >
@@ -49,16 +54,32 @@ export default function MapBox({
             height={50}
             priority
           />
-         {/* {selected?.key === shop.key && (
-           <p className="bg-white text-black text-[10px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
-            {shop.key}
-          </p>
-         )} */}
-         <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
+          <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
             {shop.key}
           </p>
         </Marker>
       ))}
+
+      {selected && !isSelectedInShops && (
+        <Marker
+          key={selected?.key}
+          longitude={selected?.location.lng}
+          latitude={selected?.location.lat}
+          anchor="bottom"
+        >
+          <Image
+            src="/crispypork.png"
+            alt={"Pin CrispyPork on Map"}
+            width={50}
+            height={50}
+            priority
+          />
+          <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
+            {selected?.key}
+          </p>
+        </Marker>
+      )}
+
       {/* {selected && (
                 <Popup
                   key={selected.key}

@@ -100,7 +100,7 @@ export default function Home() {
             <MapBox
               shops={nearbyStores}
               selected={selectedStore}
-              setSelected={setSelectedStore}
+              onSelected={setSelectedStore}
               viewState={viewState}
               setViewState={setViewState}
             />

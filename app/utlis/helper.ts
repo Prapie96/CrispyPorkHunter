@@ -18,13 +18,9 @@ export function getDistance(lat1: number, lon1: number, lat2: number, lon2: numb
 }
 
 
-// export function flyTo(setSelected:Dispatch<SetStateAction<Poi|null>>,setViewStore:Dispatch<SetStateAction<InitialLocationType>>,shop:Poi){
-//   setSelected(shop);
-//   setViewStore((prevL:InitialLocationType)=>({
-//     ...prevL,
-//     longitude: shop.location.lng,
-//     latitude: shop.location.lat,
-//     zoom: 14,
-//     transitionDuration: 1000, 
-//   }));
-// }
+export const changeGoogleImageUrl = (url:string,size=800)=>{
+  if (!url.includes("googleusercontent.com")) {
+    return url;
+  }
+  return url.replace(/=w\d+-h\d+.*$/, `=w${size}-h${size}`);
+}

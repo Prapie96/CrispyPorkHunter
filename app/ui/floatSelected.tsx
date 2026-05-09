@@ -1,17 +1,26 @@
-import { Poi } from "../types/maptypes";
-
+import { StoreData } from "../types/maptypes";
+import Image from "next/image";
+import { changeGoogleImageUrl } from "../utlis/helper";
+import DetailStore from "./detailStore";
 interface FloatSelectedProps {
-  shop: Poi;
+  store: StoreData;
 }
 
-export default function FloatSelected({ shop }: FloatSelectedProps) {
+export default function FloatSelected({ store }: FloatSelectedProps) {
+
   return (
-    <div className=" border-amber-900 border-2 mx-4 p-5">
-      <p>ร้าน : {shop.key}</p>
-      <p>ราคา : 200 บาท</p>
-      <p>Rating : 5.00</p>
-      <p>ตำแหน่ง : {shop.location.lat}</p>
-      <p>ตำแหน่ง :{shop.location.lng}</p>
+    <div className="mx-4 overflow-auto">
+      <Image
+        src={changeGoogleImageUrl(store.thumbnail)}
+        alt={store.name}
+        width={400}
+        height={400}
+        className="object-cover"
+        priority
+      />
+      <div className="mt-4">
+      <DetailStore store={store}/>
+      </div>
     </div>
   );
 }

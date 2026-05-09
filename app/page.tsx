@@ -8,65 +8,61 @@ import MapBox from "./ui/mapBox";
 import { crispyPorkShops, initialLocation } from "./const/map";
 import FloatSelected from "./ui/floatSelected";
 import FabClose from "./ui/fabclose";
-import { InitialLocationType, Poi } from "./types/maptypes";
+import { InitialLocationType,StoreData } from "./types/maptypes";
 import SideBar from "./ui/layout/sideBar";
 import { IoCaretBackSharp } from "react-icons/io5";
+import storeData from "@/app/const/places.json";
 export default function Home() {
-  const [viewState, setViewState] = useState<InitialLocationType>({
-    longitude: initialLocation.longitude,
-    latitude: initialLocation.latitude,
-    zoom: initialLocation.zoom,
-  });
-  const [search, setSearch] = useState<string | null>(null);
-  const [selectedStore, setSelectedStore] = useState<Poi | null>(null);
-  const nearbyStores = crispyPorkShops
-    .map((shop) => {
+  const [viewState, setViewState] = useState(initialLocation);
+  const [selectedStore, setSelectedStore] = useState<StoreData | undefined>();
+  const [search, setSearch] = useState<string>("");
+  const [limitStore, setLimitStore] = useState<number>(10);
+  const sortedStores = storeData
+    .map((store) => {
       const distance = getDistance(
         initialLocation.latitude,
         initialLocation.longitude,
-        shop.location.lat,
-        shop.location.lng,
+        store.location.lat,
+        store.location.lng,
       );
-      return {
-        ...shop,
-        distance,
-      };
+      return { ...store, distance };
     })
-    .filter((shop) => shop.distance <= 10)
-    .sort((a, b) => a.distance - b.distance);
+    // .filter((store) => store.distance <= 10)
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, limitStore);
 
-  const filteredShop = crispyPorkShops.filter((shop) => {
-    if (!search) return;
-    const shopName = shop.key.toLocaleLowerCase();
-    const trimSearch = search?.trim().toLocaleLowerCase();
-    return shopName.includes(trimSearch);
+  const displayShops = sortedStores.filter((store) => {
+    if (search.trim() === null) return sortedStores;
+    return store.name.includes(search.trim().toLocaleLowerCase());
   });
-  console.log("Search Result :", filteredShop);
-  const displayShops = search ? filteredShop : nearbyStores;
-  const title = search ? "ร้านที่ค้นหา" : "ร้านใกล้ฉัน";
-  useEffect(() => {
-    console.log("shops nearby :", nearbyStores);
-  }, []);
-  const handleSelectedShop = (shop: Poi) => {
-    setSelectedStore(shop);
-    setViewState((prev) => ({
-      ...prev,
-      longitude: shop.location.lng,
-      latitude: shop.location.lat,
-      zoom: 18,
-      transitionDuration: 2000,
-    }));
-  };
 
+  const handleSelectedStore = (store: StoreData) => {
+    setSelectedStore(store);
+    setViewState({
+      latitude: store.location.lat,
+      longitude: store.location.lng,
+      zoom: 15,
+    });
+  };
+  const loadingMoreStore = () => {
+    if (limitStore >= storeData.length) {
+      console.log("ไม่สามารถโหลดข้อมูลร้านค้าเพิ่มได้แล้ว");
+      return;
+    }
+    setLimitStore((prev) => prev + 10);
+  };
+  const hasMore = limitStore < storeData.length;
   return (
     <div className="bg-stone-50 h-screen overflow-hidden">
       <div className="flex  md:flex-row h-full w-full">
         <SideBar
           shopsDisplay={displayShops}
-          title={title}
+          // title={title}
           onSearch={setSearch}
           selectedStore={selectedStore}
-          onSelected={handleSelectedShop}
+          onSelected={handleSelectedStore}
+          onLimit={loadingMoreStore}
+          hasMore = {hasMore}
         />
 
         <div
@@ -81,7 +77,7 @@ export default function Home() {
             {selectedStore && (
               <>
                 <FabClose setSelected={setSelectedStore} />
-                <FloatSelected shop={selectedStore} />
+                <FloatSelected store={selectedStore} />
               </>
             )}
           </div>
@@ -89,7 +85,7 @@ export default function Home() {
           <div
             className={`flex  bg-amber-800 w-5 h-10  items-center justify-center text-white
                 rounded-r-xl cursor-pointer shadow-md `}
-            onClick={() => setSelectedStore(null)}
+            onClick={() => setSelectedStore(undefined)}
           >
             <IoCaretBackSharp />
           </div>
@@ -97,13 +93,13 @@ export default function Home() {
 
         <main className="flex-1  bg-[#E5E7EB] ">
           <div className="w-full h-full">
-            <MapBox
+            {/* <MapBox
               shops={nearbyStores}
               selected={selectedStore}
-              onSelected={setSelectedStore}
+              onSelected={handleSelectedStore}
               viewState={viewState}
               setViewState={setViewState}
-            />
+            /> */}
           </div>
         </main>
       </div>

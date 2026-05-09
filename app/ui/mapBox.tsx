@@ -1,13 +1,13 @@
 import Map, { Marker, Popup } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { InitialLocationType, Poi } from "../types/maptypes";
+import { InitialLocationType,StoreData } from "../types/maptypes";
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 
 interface MapBoxProps {
-  shops: Poi[];
-  selected: Poi | null;
-  onSelected: Dispatch<SetStateAction<Poi | null>>;
+  shops: StoreData[];
+  selected: StoreData | undefined;
+  onSelected:(shop:StoreData)=>void;
   viewState: InitialLocationType;
   setViewState: Dispatch<SetStateAction<InitialLocationType>>;
 }
@@ -19,7 +19,7 @@ export default function MapBox({
   viewState,
   setViewState,
 }: MapBoxProps) {
-  const isSelectedInShops = shops.some((shop) => shop.key === selected?.key);
+  const isSelectedInShops = shops.some((shop) => shop.name === selected?.name);
 
   return (
     <Map
@@ -32,18 +32,13 @@ export default function MapBox({
     >
       {shops.map((shop) => (
         <Marker
-          key={shop.key}
+          key={shop.name}
           longitude={shop.location.lng}
           latitude={shop.location.lat}
           anchor="bottom"
           onClick={(e) => {
             e.originalEvent.stopPropagation();
             onSelected(shop);
-            setViewState({
-              latitude: shop.location.lat,
-              longitude: shop.location.lng,
-              zoom: 15,
-            });
             console.log("Selected Pin Shop : ", shop);
           }}
         >
@@ -55,14 +50,14 @@ export default function MapBox({
             priority
           />
           <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
-            {shop.key}
+            {shop.name}
           </p>
         </Marker>
       ))}
 
       {selected && !isSelectedInShops && (
         <Marker
-          key={selected?.key}
+          key={selected?.name}
           longitude={selected?.location.lng}
           latitude={selected?.location.lat}
           anchor="bottom"
@@ -75,7 +70,7 @@ export default function MapBox({
             priority
           />
           <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
-            {selected?.key}
+            {selected?.name}
           </p>
         </Marker>
       )}

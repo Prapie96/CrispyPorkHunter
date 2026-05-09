@@ -8,7 +8,12 @@ const nextConfig: NextConfig = {
         protocol:'https',
         hostname:'lh3.googleusercontent.com',
         pathname: '**',
-      }
+      },{
+        protocol: 'https',
+        hostname: 'streetviewpixels-pa.googleapis.com',
+        port: '',
+        pathname: '/v1/**',
+      },
     ]
   }
 };

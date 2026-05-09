@@ -33,7 +33,8 @@ export default function Home() {
 
   const displayShops = sortedStores.filter((store) => {
     if (search.trim() === null) return sortedStores;
-    return store.name.includes(search.trim().toLocaleLowerCase());
+
+    return store.name.includes(search.trim().toLocaleLowerCase()) || store.district?.includes(search.trim().toLocaleLowerCase());
   });
 
   const handleSelectedStore = (store: StoreData) => {
@@ -92,15 +93,15 @@ export default function Home() {
         </div>
 
         <main className="flex-1  bg-[#E5E7EB] ">
-          <div className="w-full h-full">
-            {/* <MapBox
-              shops={nearbyStores}
+          {/* <div className="w-full h-full">
+            <MapBox
+              shops={sortedStores}
               selected={selectedStore}
               onSelected={handleSelectedStore}
               viewState={viewState}
               setViewState={setViewState}
-            /> */}
-          </div>
+            />
+          </div> */}
         </main>
       </div>
     </div>

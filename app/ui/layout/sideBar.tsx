@@ -46,7 +46,7 @@ export default function SideBar({
           id="search-input"
           type="text"
           onChange={(e) => onSearch(e.target.value)}
-          placeholder="ค้นหาร้านหมูกรอบสุดเด็ด"
+          placeholder="ค้นหาร้านหมูกรอบสุดเด็ด ค้นหาตามเขต"
           className="relative bg-stone-50 p-2 pl-8 w-full h-full rounded-md text-black border border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all shadow-sm"
         />
       </div>

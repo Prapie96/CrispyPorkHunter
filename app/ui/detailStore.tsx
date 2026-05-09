@@ -27,6 +27,10 @@ export default function DetailStore({ store }: DetailStoreProps) {
       icon: MdLocalPhone,
       value: store.contact?.phone,
     },
+    {
+        icon:FaMapPin,
+        value: store.district,
+    }
   ];
   return (
     <div className="grid grid-cols-1 gap-4">

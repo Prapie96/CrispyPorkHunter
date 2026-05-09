@@ -9,13 +9,13 @@ interface DetailStoreWithIconProps {
 export default function DetailStoreWithIcon({
   icon,
   sizeIcon,
-  detailStore = "ไม่ปรากฎ",
+  detailStore,
 }: DetailStoreWithIconProps) {
   const Icon = icon;
   return (
     <div className="flex gap-4">
       <Icon size={sizeIcon} />
-      <p>{detailStore}</p>
+      <p>{detailStore ? detailStore : "ไม่ปรากฎข้อมูล"}</p>
     </div>
   );
 }

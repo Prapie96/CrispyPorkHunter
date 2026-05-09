@@ -43,13 +43,13 @@ export default function MapBox({
           }}
         >
           <Image
-            src="/crispypork.png"
+            src="/PinCripyPorkMap.png"
             alt={"Pin CrispyPork on Map"}
-            width={50}
-            height={50}
+            width={80}
+            height={80}
             priority
           />
-          <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
+          <p className="bg-white text-amber-700 font-bold text-[10px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">
             {shop.name}
           </p>
         </Marker>
@@ -63,10 +63,10 @@ export default function MapBox({
           anchor="bottom"
         >
           <Image
-            src="/crispypork.png"
+            src="/PinCripyPorkMap.png"
             alt={"Pin CrispyPork on Map"}
-            width={50}
-            height={50}
+            width={80}
+            height={80}
             priority
           />
           <p className="bg-white text-amber-700 font-bold text-[12px] p-1 rounded shadow-md border border-amber-500 whitespace-nowrap">

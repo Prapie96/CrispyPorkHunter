@@ -18,7 +18,6 @@ import { ModeSideBar } from "@/app/types/uitypes";
 import DetailStore from "../detailStore";
 interface SideBarProps {
   shopsDisplay: StoreData[];
-  // title: string;
   search: string;
   onSearch: Dispatch<SetStateAction<string>>;
   selectedStore: StoreData | undefined;
@@ -37,26 +36,54 @@ export default function SideBar({
   hasMore,
 }: SideBarProps) {
   const [mode, setMode] = useState<ModeSideBar>("default");
-  const [storeHunt, setStoreHunt] = useState<StoreData[]>([]);
-  const modeSelectors: ModeSideBar[] = ["default", "saved", "hunt"];
+  const [storeInLocalStorage, setstoreInLocalStorage] = useState<StoreData[]>(
+    [],
+  );
+  const modeSelectors: ModeSideBar[] = [
+    "default",
+    "saved",
+    "hunt",
+    "statistic",
+  ];
   const displayTextMode: Record<ModeSideBar, string> = {
     default: "ร้านแนะนำ",
     saved: "ร้านที่บันทึก",
     hunt: "ร้านที่ล่าไปแล้ว",
+    statistic: "สถิติ",
   };
+
   useEffect(() => {
-    const getHuntStore = localStorage.getItem(mode);
-    if (getHuntStore) {
-      setStoreHunt(JSON.parse(getHuntStore));
-    }
+    const updateData = () => {
+      const sourceMode = mode === "statistic" ? "hunt" : mode;
+      const data = localStorage.getItem(sourceMode);
+      setstoreInLocalStorage(data ? JSON.parse(data) : []);
+    };
+    updateData();
+    window.addEventListener("storage", updateData);
+    return () => window.removeEventListener("storage", updateData);
   }, [mode, selectedStore]);
-  const countDistinct = storeHunt.reduce<Record<string, number>>(
+  const countDistinct = storeInLocalStorage.reduce<Record<string, number>>(
     (acc, distinct) => {
       const key = distinct.district ?? "unknown";
       if (!acc[key]) {
         acc[key] = 0;
       }
       acc[key] += 1;
+      return acc;
+    },
+    {},
+  );
+  const countProvince = storeInLocalStorage.reduce<Record<string, number>>(
+    (acc, store) => {
+      const bangkok = store.location.address.includes("กรุงเทพมหานคร");
+      const samutprakarn = store.location.address.includes("สมุทรปราการ");
+      if (bangkok) {
+        if (!acc["bangkok"]) acc["bangkok"] = 0;
+        acc["bangkok"] += 1;
+      } else if (samutprakarn) {
+        if (!acc["samutprakarn"]) acc["samutprakarn"] = 0;
+        acc["samutprakarn"] += 1;
+      }
       return acc;
     },
     {},
@@ -96,7 +123,7 @@ export default function SideBar({
           <button
             key={modeSelector}
             onClick={() => setMode(modeSelector)}
-            className={`flex-1 p-3 text-xl text-center hover:cursor-pointer hover:bg-amber-100 
+            className={`flex-1 p-3 text-md text-center hover:cursor-pointer hover:bg-amber-100 
               ${modeSelector === mode ? "border-b-2 border-amber-900 text-amber-900" : "border-b-2 border-transparent text-amber-700"}`}
           >
             {displayTextMode[modeSelector]}
@@ -111,30 +138,45 @@ export default function SideBar({
           setSelected={onSelected}
         />
       )}
-      {mode === "hunt" && (
+     
+      {/* show Store from Mode Selected*/}
+      {mode && (
         <div className="text-black">
-          {storeHunt && (
+          {storeInLocalStorage && (
             <ShowListShops
-              listShops={storeHunt}
+              listShops={storeInLocalStorage}
               selectedStore={selectedStore}
               setSelected={onSelected}
-              modeTitle={displayTextMode["hunt"]}
+              modeTitle={displayTextMode[mode]}
             />
           )}
           <button
             className="text-black mt-5 bg-amber-700 p-3 hover:cursor-pointer hover:bg-amber-950"
             onClick={() => {
               localStorage.clear();
-              setStoreHunt([]);
+              setstoreInLocalStorage([]);
             }}
           >
             Delete Saved
           </button>
-          <h1 className="text-2xl">กินไปแล้ว : {storeHunt.length}</h1>
+        </div>
+      )}
+      {mode === "statistic" && (
+        <div className="w-full h-full text-black p-4">
+          <h1 className="text-2xl">กินไปแล้ว : {storeInLocalStorage.length}</h1>
           <ul>
-            {Object.entries(countDistinct).filter((i)=>i[0] !== "unknown").map(([name, amount]) => (
+            <p>จำนวนเขตที่กินไปแล้ว</p>
+            {Object.entries(countDistinct)
+              .filter((i) => i[0] !== "unknown")
+              .map(([name, amount]) => (
+                <li key={name}>
+                  {name}: {amount}
+                </li>
+              ))}
+            <p>จำนวนจังหวัดที่กินไปแล้ว</p>
+            {Object.entries(countProvince).map(([name, amount]) => (
               <li key={name}>
-                {name}: {amount} ตัว
+                {name === "bangkok" ? "กรุงเทพมหานคร" : "สมุทรปราการ"}: {amount}
               </li>
             ))}
           </ul>

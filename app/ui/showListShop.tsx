@@ -1,10 +1,12 @@
-import {StoreData } from "../types/maptypes";
+import { StoreData } from "../types/maptypes";
+import DetailStore from "./detailStore";
 
 interface ShowListShopsProps {
   listShops: StoreData[];
   // title: string;
   selectedStore: StoreData | undefined;
   setSelected: (shop: StoreData) => void;
+  modeTitle?: string;
 }
 
 export default function ShowListShops({
@@ -12,12 +14,15 @@ export default function ShowListShops({
   // title,
   selectedStore,
   setSelected,
+  modeTitle,
 }: ShowListShopsProps) {
   return (
     <>
       {listShops.length > 0 ? (
         <div className="">
-          <p className="p-4 text-xl text-black">{'ร้านหมูกรอบใกล้ฉัน'}</p>
+          <p className="p-4 text-xl text-black">
+            {modeTitle ?? "ร้านหมูกรอบใกล้ฉัน"}
+          </p>
           {listShops.map((shop) => (
             <div
               key={shop.name}
@@ -28,11 +33,12 @@ export default function ShowListShops({
                 setSelected(shop);
               }}
             >
+              {/* <DetailStore store={shop}/>  */}
               <p>ร้าน : {shop.name}</p>
               <p>ราคา :{shop.pricing}</p>
               <p>Rating :{shop.rating}</p>
               <p>ที่อยู่ : {shop.location.address}</p>
-              {/* <p>ตำแหน่ง :{shop.location.lng}</p> */}
+              
             </div>
           ))}
         </div>

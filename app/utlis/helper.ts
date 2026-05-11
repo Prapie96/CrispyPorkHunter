@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { InitialLocationType, Poi } from "../types/maptypes";
+import { InitialLocationType } from "../types/maptypes";
 
 export function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
   const r = 6371;
@@ -24,3 +24,5 @@ export const changeGoogleImageUrl = (url:string,size=800)=>{
   }
   return url.replace(/=w\d+-h\d+.*$/, `=w${size}-h${size}`);
 }
+
+

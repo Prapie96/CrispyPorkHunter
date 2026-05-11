@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { lusitana } from "./fonts";
 
 export default function LogoSection() {
   return (
@@ -9,11 +10,14 @@ export default function LogoSection() {
           alt="Logo Crispy Pork"
           width={80}
           height={80}
-         
         />
-        <h2 className=" text-2xl font-bold">Crispy Pork Hunter</h2>
+        <strong
+          className={`${lusitana.className} antialiased text-3xl  text-white`}
+        >
+          Crispy Pork Hunter
+        </strong>
       </div>
-      <p className=" text-amber-100 text-sm opacity-90 font-light">
+      <p className="text-amber-100 text-sm opacity-90 font-light text-center">
         ตามล่าร้านหมูกรอบทั่วราชอาณาจักรไทย
       </p>
     </div>

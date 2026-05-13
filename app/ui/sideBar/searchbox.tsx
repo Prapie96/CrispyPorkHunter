@@ -1,5 +1,5 @@
 import { IoMdClose } from "react-icons/io";
-import { StoreData } from "../types/maptypes";
+import { StoreData } from "../../types/maptypes";
 
 interface SearchBoxProps {
   search: string;
@@ -13,7 +13,7 @@ export default function SearchBox({
   onSelected,
 }: SearchBoxProps) {
   return (
-    <div className="m-3 h-12 sticky top-0 group">
+    <div className="m-3 h-12 group">
       <input
         id="search-input"
         type="text"

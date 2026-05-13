@@ -24,15 +24,17 @@ export default function FloatSelected({ store }: FloatSelectedProps) {
       <div className="flex-1 p-4">
         <DetailStore store={store} />
 
-        <div className="p-1 bg-amber-50 sticky bottom-0 z-10">
+        <div className="flex p-2 bg-amber-50 sticky bottom-0 z-10 place-items-center ">
           <ButtonUI
+            variant="primary"
+            size="md"
             title={
               huntedControl.toggle
-                ? "ล่าร้านนี้แล้ว (กดเพื่อยกเลิก)"
+                ? "พิชิตร้านนี้แล้ว!"
                 : "คุณล่าร้านนี้หรือยัง?"
             }
             onClick={huntedControl.handleToggle}
-            className={huntedControl.toggle ? "bg-green-600" : "bg-amber-600"}
+            className={`${huntedControl.toggle ? 'bg-green-600' : null}`}
           />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Poi, StoreData } from "../types/maptypes";
+import { StoreData } from "../types/maptypes";
 
 interface FabCloseProps {
   setSelected: Dispatch<SetStateAction<StoreData | undefined>>;

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { InitialLocationType } from "../types/maptypes";
+import { InitialLocationType, StoreData } from "../types/maptypes";
 
 export function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
   const r = 6371;
@@ -26,3 +26,10 @@ export const changeGoogleImageUrl = (url:string,size=800)=>{
 }
 
 
+export const countDistrict = (listData:StoreData[])=>{
+  return listData.reduce<Record<string, number>>((acc, cur) => {
+    const district = cur.district ?? "unknown";
+    acc[district] = (acc[district] || 0) + 1;
+    return acc;
+  }, {});
+}

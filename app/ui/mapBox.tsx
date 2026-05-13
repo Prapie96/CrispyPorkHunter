@@ -1,8 +1,8 @@
-import Map, { Marker, Popup, MapRef } from "react-map-gl/mapbox";
+import Map, { Marker, MapRef } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { InitialLocationType, StoreData } from "../types/maptypes";
 import Image from "next/image";
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState } from "react";
 import { initialLocation } from "../const/map";
 import mapboxgl from "mapbox-gl";
 
@@ -10,16 +10,12 @@ interface MapBoxProps {
   shops: StoreData[];
   selected: StoreData | undefined;
   onSelected: (shop: StoreData) => void;
-  // viewState: InitialLocationType;
-  // setViewState: Dispatch<SetStateAction<InitialLocationType>>;
 }
 
 export default function MapBox({
   shops,
   selected,
   onSelected,
-  // viewState,
-  // setViewState,
 }: MapBoxProps) {
   const isSelectedInShops = shops.some((shop) => shop.name === selected?.name);
   const [viewState, setViewState] = useState(initialLocation);
@@ -28,24 +24,16 @@ export default function MapBox({
 
   useEffect(() => {
     if (selected && mapRef.current) {
-      // ใช้คำสั่ง flyTo เพื่อความสมูท (เป็น Imperative Command)
       const map = mapRef.current.getMap();
       map.flyTo({
         center: [selected.location.lng, selected.location.lat],
         zoom: 15,
-        duration: 2000, // ความเร็วในการบิน (ms)
+        duration: 2000,
         essential: true,
       });
     }
   }, [selected]);
-  // useEffect(() => {
-  //   if (shops.length > 0 && mapRef.current) {
-  //     const bounds = new mapboxgl.LngLatBounds();
-  //     shops.forEach((shop) => bounds.extend([shop.location.lng, shop.location.lat]));
-      
-  //     mapRef.current.fitBounds(bounds, { padding: 50, duration: 1000 });
-  //   }
-  // }, [shops.length]);
+
   return (
     <Map
       ref={mapRef}
@@ -100,28 +88,6 @@ export default function MapBox({
           </p>
         </Marker>
       )}
-
-      {/* {selected && (
-                <Popup
-                  key={selected.key}
-                  longitude={selected.location.lng}
-                  latitude={selected.location.lat}
-                  anchor="bottom"
-                  onClose={() => setSelected(null)}
-                  offset={40}
-                  closeOnClick = {false}
-                >
-                  <div className="p-2">
-                    <h3 className="font-bold text-amber-800">
-                      {selected.key}
-                    </h3>
-                    <p className="text-sm">คะแนน: ⭐ {20}</p>
-                    <button className="bg-orange-500 text-white text-xs px-2 py-1 mt-2 rounded">
-                      ดูรายละเอียด
-                    </button>
-                  </div>
-                </Popup>
-              )} */}
     </Map>
   );
 }

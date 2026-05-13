@@ -1,14 +1,16 @@
 import { StoreData } from "@/app/types/maptypes";
 import { ModeSideBar } from "@/app/types/uitypes";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import StatCard from "../Card/storeCard";
+import StatCardWrapper from "../Card/storeCardWrapper";
+import { countDistrict } from "@/app/utlis/helper";
+import { displayTextMode } from "@/app/const/variant";
 
 interface StoreListPros {
   storeList: StoreData[];
   selectedStore: StoreData | undefined;
   onStoreSelected: (store: StoreData) => void;
   mode: ModeSideBar;
-  storeInLocalStorage:StoreData[];
-  onSetInLocalStorage : (storeInLocalStorage:StoreData[])=>void;
 }
 
 export default function StoreList({
@@ -16,55 +18,60 @@ export default function StoreList({
   selectedStore,
   onStoreSelected,
   mode,
-  storeInLocalStorage,
-  onSetInLocalStorage
 }: StoreListPros) {
-  const displayTextMode: Record<ModeSideBar, string> = {
-    default: "ร้านแนะนำ",
-    saved: "ร้านที่บันทึก",
-    hunt: "ร้านที่ล่าไปแล้ว",
-    statistic: "สถิติ",
+  const huntedDistrict = countDistrict(storeList);
+
+  const renderEmptyData = () => {
+    if ((mode === "statistic" || "saved") && storeList.length === 0)
+      return "ยังไม่มีประวัติการกิน";
+    if (storeList.length === 0) return "ไม่พบข้อมูลร้าน";
+    return null;
   };
-//   const [storeInLocalStorage, setstoreInLocalStorage] = useState<StoreData[]>([]);
-  useEffect(() => {
-    const updateData = () => {
-      const sourceMode = mode === "statistic" ? "hunt" : mode;
-      const data = localStorage.getItem(sourceMode);
-      onSetInLocalStorage(data ? JSON.parse(data) : []);
-    };
-    updateData();
-    window.addEventListener("storage", updateData);
-    return () => window.removeEventListener("storage", updateData);
-  }, [mode]);
-  const displayData = mode === "default" ? storeList : storeInLocalStorage;
+
   return (
-    <div>
-      {displayData.length > 0 ? (
-        <div className="">
-          <p className="p-4 text-xl text-black">
-            {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}
-          </p>
-          {displayData.map((shop) => (
+    <div className="text-black w-full h-full">
+      {/* ---show title Mode --- */}
+      <p className="p-4 text-xl ">
+        {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}
+      </p>
+      {/* --- show statistic when  mode === statistic --- */}
+      {mode === "statistic" && (
+        <section className="p-5">
+          <StatCardWrapper huntedStoreLocalData={storeList} />
+          <strong>เขตที่พิชิตไปแล้ว</strong>
+          {Object.entries(huntedDistrict).map(([district, amount]) => (
+            <ul key={district}>
+              <li>
+                {district !== "unknown" ? district : "ไม่พบข้อมูลเขต"} :{" "}
+                {amount}
+              </li>
+            </ul>
+          ))}
+        </section>
+      )}
+
+      {storeList.length > 0 && mode !== "statistic" ? (
+        <>
+          {storeList.map((shop) => (
             <div
               key={shop.name}
-              className={`m-2 p-4 text-black  rounded-md shadow-2xs border-b-amber-500 hover:bg-gray-300 cursor-pointer
+              className={`m-2 p-4 rounded-md shadow-2xs border-b-amber-500 hover:bg-gray-300 cursor-pointer
                  ${selectedStore?.name === shop.name ? "bg-linear-to-br from-amber-600 to-orange-800 shadow-md text-white" : "bg-amber-100"} 
                 `}
               onClick={() => {
                 onStoreSelected(shop);
               }}
             >
-              {/* <DetailStore store={shop}/>  */}
               <p>ร้าน : {shop.name}</p>
-              <p>ราคา :{shop.pricing}</p>
-              <p>Rating :{shop.rating}</p>
+              <p>ราคา : {shop.pricing}</p>
+              <p>Rating : {shop.rating} ⭐</p>
               <p>ที่อยู่ : {shop.location.address}</p>
             </div>
           ))}
-        </div>
+        </>
       ) : (
-        <div className="text-xl text-black text-center mt-4">
-          {!selectedStore && "ไม่พบร้านที่ค้นหา"}
+        <div className="text-lg text-gray-500 text-center mt-10">
+          {renderEmptyData()}
         </div>
       )}
     </div>

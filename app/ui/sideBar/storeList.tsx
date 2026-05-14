@@ -3,12 +3,14 @@ import { ModeSideBar } from "@/app/types/uitypes";
 import StatCardWrapper from "../Card/storeCardWrapper";
 import { countDistrict } from "@/app/utlis/helper";
 import { displayTextMode } from "@/app/const/variant";
+import ButtonUI from "../buttonUI";
 
 interface StoreListPros {
   storeList: StoreData[];
   selectedStore: StoreData | undefined;
   onStoreSelected: (store: StoreData) => void;
   mode: ModeSideBar;
+  onClearHistory:(targetMode:Exclude<ModeSideBar,"default" | "statistic">)=>void;
 }
 
 export default function StoreList({
@@ -16,22 +18,29 @@ export default function StoreList({
   selectedStore,
   onStoreSelected,
   mode,
+  onClearHistory
 }: StoreListPros) {
   const huntedDistrict = countDistrict(storeList);
 
   const renderEmptyData = () => {
-    if ((mode === "statistic" || "saved") && storeList.length === 0)
-      return "ยังไม่มีประวัติการกิน";
+    if ((mode === "statistic" || mode === "saved") && storeList.length === 0) return "ยังไม่มีประวัติการกิน";
     if (storeList.length === 0) return "ไม่พบข้อมูลร้าน";
     return null;
   };
 
   return (
     <div className="text-black w-full h-full text-sm sm:text-base">
-      {/* ---show title Mode --- */}
-      <p className="p-4 text-xl ">
-        {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}
-      </p>
+      {/* ---show title Mode  & Button--- */}
+      <header className="flex justify-between p-4">
+        <p className="text-xl ">
+          {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}
+        </p>
+       <div className="flex justify-end">
+    {(mode === "saved" || mode === "hunt") && <ButtonUI variant="secondary" size="sm" onClick={()=>onClearHistory(mode)}>
+      ล้างประวัติ
+    </ButtonUI>}
+  </div>
+      </header>
       {/* --- show statistic when  mode === statistic --- */}
       {mode === "statistic" && (
         <section className="p-5">

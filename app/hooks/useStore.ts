@@ -24,6 +24,14 @@ export function useStore() {
     return () => window.removeEventListener("storage", updateData); //clear EventListener
   }, [mode]);
 
+  //listener when data cleared
+  const clearHistory = (targetMode:Exclude<ModeSideBar,"default" | "statistic">)=>{
+    localStorage.removeItem(targetMode);
+    setStoreInLocalstorage([]);
+  }
+
+
+
   // sort data compare initialState location
   const processData = useMemo(() => {
     return allSortData
@@ -79,5 +87,6 @@ export function useStore() {
     hasMore,
     mode,
     setMode,
+    clearHistory,
   };
 }

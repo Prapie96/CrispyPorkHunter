@@ -24,6 +24,7 @@ export default function HomeClient() {
     handleLoadMore,
     mode,
     setMode,
+    clearHistory
   } = useStore();
   const disabledLoadMore = displayStores.length === 0;
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -31,9 +32,9 @@ export default function HomeClient() {
     <div className="bg-stone-50 h-screen overflow-hidden ">
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className={`absolute top-2  z-60 bg-amber-500 text-white p-2 rounded-md shadow-md hover:bg-amber-600 
+        className={`absolute top-4  z-60 bg-amber-500 text-white p-2 rounded-md shadow-md hover:bg-amber-600 
             transition-colors
-            ${isSidebarOpen ? "left-75 sm:left-96" : "left-2"}
+            ${isSidebarOpen ? "left-96" : "left-2"}
             `}
         title={isSidebarOpen ? "Close Sidebar" : "Open Sidebar"}
       >
@@ -42,7 +43,7 @@ export default function HomeClient() {
 
       <div className="flex h-full w-full relative">
         <NewSideBar isOpen={isSidebarOpen}>
-          <div className="bg-stone-50 sticky top-0">
+          <div className="sticky top-0 bg-yellow-50">
             <ModeSelector mode={mode} onModeSelected={setMode} />
             {mode === "default" && (
               <SearchBox
@@ -58,6 +59,7 @@ export default function HomeClient() {
               selectedStore={selectedStore}
               onStoreSelected={setSelectedStore}
               mode={mode}
+              onClearHistory={clearHistory}
             />
           )}
 
@@ -69,6 +71,7 @@ export default function HomeClient() {
               onClick={handleLoadMore}
               disabled={!hasMore || disabledLoadMore}
               hidden={displayStores.length === 0}
+              className="mx-auto mb-2"
             />
           )}
         </NewSideBar>

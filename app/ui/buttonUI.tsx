@@ -10,7 +10,7 @@ interface ButtonUIProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function ButtonUI({ variant = "primary",size ="lg",children,className, ...props }: ButtonUIProps) {
   const baseStyles =`
-    mx-auto inline-flex items-center justify-center rounded-2xl font-medium transition-colors cursor-pointer
+    inline-flex items-center justify-center rounded-2xl font-medium transition-colors cursor-pointer
     disabled:bg-gray-400 disabled:cursor-default focus:outline-none
     `;
   return (

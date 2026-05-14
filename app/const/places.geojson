@@ -1,0 +1,1705 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5852912,
+          13.6449277
+        ]
+      },
+      "properties": {
+        "name": "ร้านข้าวหมูแดงสวนหลวง - ปู่เจ้า",
+        "rating": 4.6,
+        "district": "",
+        "address": "ซอย ร่วมพัฒนา 1 ตำบล สำโรงกลาง อำเภอพระประแดง สมุทรปราการ 10130",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.51473,
+          13.7371139
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสีมรกต",
+        "rating": 4.3,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "80-82 ซอย สุกร 1 แขวงตลาดน้อย เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6054105,
+          13.6977794
+        ]
+      },
+      "properties": {
+        "name": "อร่อยหมูกรอบหมูแดงโฮมเมด",
+        "rating": 4.5,
+        "district": "เขตพระโขนง",
+        "address": "2363 ถ. สุขุมวิท แขวงบางจาก เขตพระโขนง กรุงเทพมหานคร 10260",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5404021,
+          13.8370506
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงนายไซ",
+        "rating": 4.3,
+        "district": "",
+        "address": "1059 ถ. ประชาชื่น แขวงวงศ์สว่าง บางซื่อ กรุงเทพมหานคร 10800",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5495698,
+          13.7244557
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบเจ๊ไหม บ่อนไก่",
+        "rating": 4.6,
+        "district": "เขตปทุมวัน",
+        "address": "PGFX+QRP แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6122203,
+          13.6437755
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบนายเบิ้ม",
+        "rating": 4.8,
+        "district": "",
+        "address": "29 ซอย ด่านสำโรง 54 ตำบล สำโรงเหนือ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5270187,
+          13.7337061
+        ]
+      },
+      "properties": {
+        "name": "ตรอกหมูกรอบ (ป้าติ๋ว)",
+        "rating": 4.2,
+        "district": "เขตปทุมวัน",
+        "address": "1543 ถ. พระรามที่ 4 แขวงวังใหม่ เขตปทุมวัน กรุงเทพมหานคร 10330",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6724489,
+          13.6414925
+        ]
+      },
+      "properties": {
+        "name": "ร้านหมูกรอบเร็กเก้",
+        "rating": 4.7,
+        "district": "",
+        "address": "ข้างศูนย์กู้ชีพบางแก้ว (รถมอไซด์หมูกรอบจอดหน้ารถขายกาแฟค่ะ ซอย บางแก้ว สมุทรปราการ",
+        "pricing": "฿200-400 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6370177,
+          13.6802113
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงหมูกรอบ นครปฐม",
+        "rating": "",
+        "district": "เขตพระโขนง",
+        "address": "1 58 Prawit Lae Phuean Alley, แขวงบางจาก เขตพระโขนง กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4967211,
+          13.8401829
+        ]
+      },
+      "properties": {
+        "name": "ที ดับบลิว หมูกรอบ",
+        "rating": 4.6,
+        "district": "",
+        "address": "716 ถ. พิบูลสงคราม ตำบลสวนใหญ่ อ. เมือง นนทบุรี 11000",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6537433,
+          13.6283985
+        ]
+      },
+      "properties": {
+        "name": "บ้านหมูหมูกรอบ(เลียบคลองหลวงแพ่ง)",
+        "rating": 4.6,
+        "district": "",
+        "address": "29 3 ถนน หนามแดง-บางพลี ตำบล บางแก้ว อำเภอบางพลี สมุทรปราการ 10540",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4937031,
+          13.7257083
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบเฮียหมิง",
+        "rating": 4.3,
+        "district": "",
+        "address": "10 ถ. ลาดหญ้า แขวงคลองสาน คลองสาน กรุงเทพมหานคร 10600",
+        "pricing": "฿100-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5647502,
+          13.7664585
+        ]
+      },
+      "properties": {
+        "name": "ร้านบรรพบุรุษหมูกรอบ รัชดา",
+        "rating": 4.3,
+        "district": "เขตดินแดง",
+        "address": "524 ซอยชาญเมือง แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6434036,
+          13.6566653
+        ]
+      },
+      "properties": {
+        "name": "นายจิว หมูแดง-หมูกรอบ ลาซาล ศรีนครินทร์",
+        "rating": 4.5,
+        "district": "เขตบางนา",
+        "address": "1359 ถ. ลาซาล แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6310517,
+          13.7366383
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบลุงสมพงศ์ (Mukrob lung Sompong)",
+        "rating": 4.6,
+        "district": "เขตสวนหลวง",
+        "address": "1504 ซอย พัฒนาการ แขวงสวนหลวง เขตสวนหลวง กรุงเทพมหานคร 10250",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5092098,
+          13.7236996
+        ]
+      },
+      "properties": {
+        "name": "Alex หมูแดง หมูกรอบ",
+        "rating": 4.8,
+        "district": "",
+        "address": "299 ถ. เจริญนคร แขวงคลองต้นไทร คลองสาน กรุงเทพมหานคร 10600",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5435879,
+          13.7773751
+        ]
+      },
+      "properties": {
+        "name": "ร้านข้าวหมูแดง-หมูกรอบธานี",
+        "rating": 4.2,
+        "district": "เขตพญาไท",
+        "address": "QGGV+XC4 ถ. พหลโยธิน แขวงพญาไท เขตพญาไท กรุงเทพมหานคร 10400",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.501086,
+          13.6769833
+        ]
+      },
+      "properties": {
+        "name": "คุณหยิน ข้าวหมูกรอบ หมูแดง",
+        "rating": 5,
+        "district": "เขตราษฎร์บูรณะ",
+        "address": "โลตัส แขวงบางปะกอก เขตราษฎร์บูรณะ กรุงเทพมหานคร 10140",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6064438,
+          13.63469
+        ]
+      },
+      "properties": {
+        "name": "ร้าน ข้าวหมูแดง หมูกรอบ ทิพวัล",
+        "rating": 4.8,
+        "district": "",
+        "address": "JJM4+VHG หมู่บ้านทิพวัล ตำบลเทพารักษ์ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5141618,
+          13.7091825
+        ]
+      },
+      "properties": {
+        "name": "ก๋วยจั๊บมิสเตอร์โจ",
+        "rating": 4.5,
+        "district": "เขตบางคอแหลม",
+        "address": "313/7 ถ. จันทน์ แขวงวัดพระยาไกร เขตบางคอแหลม กรุงเทพมหานคร 10120",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4063524,
+          13.7740146
+        ]
+      },
+      "properties": {
+        "name": "ฟูฟ่องหมูกรอบ",
+        "rating": 4.6,
+        "district": "เขตทวีวัฒนา",
+        "address": "100 140 พุทธมณฑลสาย 2 ซอย 24 แขวงศาลาธรรมสพน์ เขตทวีวัฒนา กรุงเทพมหานคร 10170",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6184638,
+          13.662312
+        ]
+      },
+      "properties": {
+        "name": "ราชาบะหมี่เกี๊ยว หมูแดง หมูกรอบ",
+        "rating": 4,
+        "district": "เขตบางนา",
+        "address": "600/1 ถ. สุขุมวิท แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5694968,
+          13.7784028
+        ]
+      },
+      "properties": {
+        "name": "เจ๊เมย์ หมูแดง-หมูกรอบ ตลาดห้วยขวาง",
+        "rating": 4.6,
+        "district": "เขตดินแดง",
+        "address": "9 ซอย ประชาสงเคราะห์ 34 แขวงรัชดาภิเษก เขตดินแดง กรุงเทพมหานคร 10400",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6147918,
+          13.6218382
+        ]
+      },
+      "properties": {
+        "name": "Me หมูกรอบ",
+        "rating": 4.8,
+        "district": "",
+        "address": "19 หมู่บ้าน 502 ถ. ศรีนครินทร์ ตำบล บางเมืองใหม่ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6134075,
+          13.6796837
+        ]
+      },
+      "properties": {
+        "name": "ราชาบะหมี่-เกี๊ยว ราชาข้าวหมูแดง",
+        "rating": 4.6,
+        "district": "เขตบางนา",
+        "address": "15/71 Soi Udomsuk 9Rd, Bangna Nuea, District, เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.539854,
+          13.768692
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบ HERO (Crispy Pork)",
+        "rating": 4.8,
+        "district": "เขตพญาไท",
+        "address": "899 ถ. พหลโยธิน แขวงพญาไท เขตพญาไท กรุงเทพมหานคร 10400",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6288164,
+          13.7102249
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง หมูกรอบ แปดริ้ว",
+        "rating": "",
+        "district": "เขตสวนหลวง",
+        "address": "1685 ถ. อ่อนนุช แขวงสวนหลวง เขตสวนหลวง กรุงเทพมหานคร 10250",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5970109,
+          13.714257
+        ]
+      },
+      "properties": {
+        "name": "บะหมี่หมูแดง-หมูกรอบ",
+        "rating": 5,
+        "district": "เขตวัฒนา",
+        "address": "PH7W+PR2 แขวงพระโขนงเหนือ เขตวัฒนา กรุงเทพมหานคร 10110",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4804042,
+          13.6820003
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง-หมูกรอบ เจ๊ดวง aka Red pork and crispy pork rice J'Duang",
+        "rating": 4.3,
+        "district": "เขตจอมทอง",
+        "address": "แขวงบางมด เขตจอมทอง กรุงเทพมหานคร 10150",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5593526,
+          13.6355205
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง,หมูกรอบ ขัาวมันไก่ ก๋วยเตี๋ยว By. MOL",
+        "rating": 4.7,
+        "district": "",
+        "address": "32/5 หมู่15 ตำบล บางหัวเสือ อำเภอพระประแดง สมุทรปราการ 10130",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4437182,
+          13.6519507
+        ]
+      },
+      "properties": {
+        "name": "จินเต๋อ ข้าวหมูแดง-หมูกรอบ ย่างเตาถ่าน",
+        "rating": 4.2,
+        "district": "เขตบางขุนเทียน",
+        "address": "79 ซอย 1/2 แขวงแสมดำ เขตบางขุนเทียน กรุงเทพมหานคร 10150",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6331584,
+          13.6895652
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบ มงก๊ก",
+        "rating": 5,
+        "district": "เขตพระโขนง",
+        "address": "679/4 ซอยวชิรธรรมสาธิต 57 แยก 11 แขวงบางจาก เขตพระโขนง กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6267512,
+          13.684792
+        ]
+      },
+      "properties": {
+        "name": "Kwak กวัก ข้าวหมูแดง หมูกรอบ หน้าเป็ด",
+        "rating": 5,
+        "district": "เขตพระโขนง",
+        "address": "1068, 12 ถนน สุขุมวิท 101/1 แขวงบางจาก เขตพระโขนง กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5923435,
+          13.710166
+        ]
+      },
+      "properties": {
+        "name": "ร้านข้าวหมูแดงหมูกรอบ ข้าวมันไก่",
+        "rating": 5,
+        "district": "เขตคลองเตย",
+        "address": "PH6R+2WR ซอย ภูมิจิตร แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6219835,
+          13.6191893
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบอาสา",
+        "rating": 5,
+        "district": "",
+        "address": "98 ถ. ศรีนครินทร์ ตำบลเทพารักษ์ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5023523,
+          13.7328531
+        ]
+      },
+      "properties": {
+        "name": "สมใจ ข้าวหมูแดงหมูกรอบท่าดินแดง",
+        "rating": 4.3,
+        "district": "",
+        "address": "276, 212 ถ. ท่าดินแดง แขวงคลองสาน คลองสาน กรุงเทพมหานคร 10600",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4775164,
+          13.7206576
+        ]
+      },
+      "properties": {
+        "name": "สุณีข้าวหมูแดงตลาดพลู",
+        "rating": 4,
+        "district": "",
+        "address": "854 8 ถนน เทอดไท 25 แขวงตลาดพลู ตลาดพลู กรุงเทพมหานคร 10600",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6638485,
+          13.674433
+        ]
+      },
+      "properties": {
+        "name": "ก๋วยเตี๋ยวป้าชู ข้าวหมูแดงหมูกรอบ",
+        "rating": 5,
+        "district": "เขตประเวศ",
+        "address": "MMF7+QGH เฉลิมพระเกียรติ ร.9 แขวงหนองบอน เขตประเวศ กรุงเทพมหานคร 10250",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5957096,
+          13.636935
+        ]
+      },
+      "properties": {
+        "name": "ท๊อปหมูแดงหมูกรอบ(toping)",
+        "rating": 5,
+        "district": "",
+        "address": "420 5 ซอยอภิชาติ ตำบลเทพารักษ์ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4875183,
+          13.7698145
+        ]
+      },
+      "properties": {
+        "name": "หมูทำอะไรก็อร่อย (ข้าวหมูแดงหมูกรอบ)",
+        "rating": 4.2,
+        "district": "",
+        "address": "36 ถ. อรุณอมรินทร์ แขวงบางยี่ขัน บางพลัด กรุงเทพมหานคร 10700",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.615224,
+          13.691717
+        ]
+      },
+      "properties": {
+        "name": "ร้านราชาบะหมี่เกี๊ยว-ข้าวหมูกรอบ หมูแดง ซอยปุณณวิถี 25",
+        "rating": 4.6,
+        "district": "เขตพระโขนง",
+        "address": "715 2 ซอย สุขุมวิท 101 แขวงบางจาก เขตพระโขนง กรุงเทพมหานคร 10260",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6493401,
+          13.7334511
+        ]
+      },
+      "properties": {
+        "name": "กะเพราแมน X อาเฟย หมูแดง หมูกรอบ - พัฒนาการ",
+        "rating": 4.4,
+        "district": "เขตสวนหลวง",
+        "address": "13 พัฒนาการ 53 แขวงสวนหลวง เขตสวนหลวง กรุงเทพมหานคร 10250",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4869797,
+          13.6514615
+        ]
+      },
+      "properties": {
+        "name": "ปิงข้าวหมูแดงหมูกรอบ",
+        "rating": 4.3,
+        "district": "เขตทุ่งครุ",
+        "address": "365/1634 ถนน พุทธบูชา แขวงบางมด เขตทุ่งครุ กรุงเทพมหานคร 10140",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6068582,
+          13.6353514
+        ]
+      },
+      "properties": {
+        "name": "ราชาบะหมี่เกี้ยวหมูแดงข้าวหมูแดงกรอบ",
+        "rating": 4.3,
+        "district": "",
+        "address": "74 420 ตำบลเทพารักษ์ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.496362,
+          13.6546739
+        ]
+      },
+      "properties": {
+        "name": "ร้านหมูกรอบย่ากรอบ",
+        "rating": 5,
+        "district": "เขตทุ่งครุ",
+        "address": "1022/95 ซ. ประชาอุทิศ 28 แขวงบางมด เขตทุ่งครุ กรุงเทพมหานคร 10140",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5182277,
+          13.7338283
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงเฮียตือ เจ้าเก่า",
+        "rating": 4.3,
+        "district": "เขตบางรัก",
+        "address": "30 ซอย สว่าง 6 แขวงมหาพฤฒาราม เขตบางรัก กรุงเทพมหานคร 10500",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4679917,
+          13.7000911
+        ]
+      },
+      "properties": {
+        "name": "ร้านเฮียเล็ก หมูแดง หมูกรอบ เจ้าเก่า (วุฒิอากาศ57)",
+        "rating": 4.4,
+        "district": "เขตจอมทอง",
+        "address": "267 ถ จอมทอง แขวงบางค้อ เขตจอมทอง กรุงเทพมหานคร 10150",
+        "pricing": "฿1-400 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5680104,
+          13.7756297
+        ]
+      },
+      "properties": {
+        "name": "ข้าวขาหมู หมูแดงหมูกรอบ-หอนาฬิกา",
+        "rating": 4.1,
+        "district": "เขตดินแดง",
+        "address": "QHG9+762 แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5134846,
+          13.7370998
+        ]
+      },
+      "properties": {
+        "name": "คงประเสริฐ ข้าวหมูแดง หมูกรอบ",
+        "rating": 4.4,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "304-6 ซอย สุกร ถ มิตรภาพไทย - จีน แขวงตลาดน้อย เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6619197,
+          13.8404013
+        ]
+      },
+      "properties": {
+        "name": "ศรีวัชเชิญชิม",
+        "rating": 4.4,
+        "district": "เขตคันนายาว",
+        "address": "53 7 ซ. รามอินทรา 71 แขวงรามอินทรา เขตคันนายาว กรุงเทพมหานคร 10230",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5586626,
+          13.7587536
+        ]
+      },
+      "properties": {
+        "name": "หมูกรอบคุณยาย",
+        "rating": 5,
+        "district": "เขตดินแดง",
+        "address": "670 447 ซ. ขวัญพัฒนา แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6252183,
+          13.6607921
+        ]
+      },
+      "properties": {
+        "name": "ข้าวขาหมู หมูแดงหมูกรอบ ลาซาล17",
+        "rating": "",
+        "district": "เขตบางนา",
+        "address": "273 ถ. ลาซาล บางนา เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5021802,
+          13.7461939
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงนายฮุย (นาครสนุก)",
+        "rating": 3.9,
+        "district": "เขตพระนคร",
+        "address": "728 1 ถ. เจริญกรุง แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5158515,
+          13.7199481
+        ]
+      },
+      "properties": {
+        "name": "บะหมี่ หมูแดงหมูกรอบ",
+        "rating": 4.4,
+        "district": "เขตบางรัก",
+        "address": "1439 ถ. เจริญกรุง แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5298093,
+          13.7235431
+        ]
+      },
+      "properties": {
+        "name": "ป.ป๋วย ข้าวหมูแดง",
+        "rating": 5,
+        "district": "เขตบางรัก",
+        "address": "3 93 ถนน นราธิวาสราชนครินทร์ แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5016265,
+          13.6951996
+        ]
+      },
+      "properties": {
+        "name": "ก๋วยเตี๋ยวต้มยำหมูกรอบ",
+        "rating": 4.9,
+        "district": "เขตบางคอแหลม",
+        "address": "760 ถ. เจริญกรุง แขวงบางคอแหลม เขตบางคอแหลม กรุงเทพมหานคร 10120",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5241387,
+          13.7434311
+        ]
+      },
+      "properties": {
+        "name": "ดงหมูกรอบ จุฬา 5",
+        "rating": 4.2,
+        "district": "เขตปทุมวัน",
+        "address": "17 จุฬา ซ. รองเมือง 5 แขวงวังใหม่ เขตปทุมวัน กรุงเทพมหานคร 10330",
+        "pricing": "฿100-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5341461,
+          13.6595273
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงบ้านแซ่",
+        "rating": 4,
+        "district": "",
+        "address": "114 บ้านแซ่ ตำบล ตลาด อำเภอพระประแดง สมุทรปราการ 10130",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5392136,
+          13.7538515
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงหมูกรอบเป็ดย่างโอ้โหพุงป่อง",
+        "rating": 3.3,
+        "district": "เขตราชเทวี",
+        "address": "122/47 ถ. ราชปรารภ แขวงถนนพญาไท เขตราชเทวี กรุงเทพมหานคร 10400",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5099369,
+          13.7401053
+        ]
+      },
+      "properties": {
+        "name": "ร้านก๋วยจั๊บนายเอ็ก",
+        "rating": 4.4,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "442 ซอย 9 แขวงสัมพันธวงศ์ เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5317964,
+          13.7067723
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง นครปฐม - เจ้าเก่า วัดสุทธิ",
+        "rating": 4.3,
+        "district": "เขตสาทร",
+        "address": "74 ซ. จันทน์ 16 แขวงทุ่งวัดดอน เขตสาทร กรุงเทพมหานคร 10120",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5226661,
+          13.6382808
+        ]
+      },
+      "properties": {
+        "name": "ร้าน ข้าวมันไก่ตอน หมูกรอบ",
+        "rating": 4.8,
+        "district": "",
+        "address": "JGQF+837 ตำบล บางครุ อำเภอพระประแดง สมุทรปราการ 10130",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.523297,
+          13.7413265
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงเลิศรสเจ๊โส่ย",
+        "rating": 4.4,
+        "district": "เขตปทุมวัน",
+        "address": "198 ซอย จุฬาฯ 18 แขวงวังใหม่ เขตปทุมวัน กรุงเทพมหานคร 10330",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.503681,
+          13.6815573
+        ]
+      },
+      "properties": {
+        "name": "ร้านเจ๊เล็ก ข้าวหมูแดง",
+        "rating": 4.6,
+        "district": "เขตราษฎร์บูรณะ",
+        "address": "300/1 ซอย สุขสวัสดิ์ 27 ถนน ราษฎร์พัฒนา แขวงบางปะกอก เขตราษฎร์บูรณะ กรุงเทพมหานคร 10140",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6356633,
+          13.6580543
+        ]
+      },
+      "properties": {
+        "name": "ยศ ไทยอีสาน ข้าวหมูกรอบ หมูแดง ขาหมู เกี๊ยว",
+        "rating": 4.8,
+        "district": "เขตบางนา",
+        "address": "MJ5P+67F แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5965686,
+          13.7112819
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงพระโขนง",
+        "rating": 5,
+        "district": "เขตคลองเตย",
+        "address": "3 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร 10110",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5275461,
+          13.7526837
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูกรอบหมูแดงนายอ้วนกิ่งเพชร",
+        "rating": 5,
+        "district": "เขตราชเทวี",
+        "address": "162, 12 ถ. เพชรบุรี แขวงถนนเพชรบุรี เขตราชเทวี กรุงเทพมหานคร 10400",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5098712,
+          13.7407295
+        ]
+      },
+      "properties": {
+        "name": "เซี้ย เหล่ายี่ห้อ ข้าวหมูแดงแปลงนาม",
+        "rating": 4.1,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "59 ถนน แปลงนาม แขวงสัมพันธวงศ์ เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5074379,
+          13.7478065
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงนครสนุก สี่แยกวรจักร",
+        "rating": 4.4,
+        "district": "เขตป้อมปราบศัตรูพ่าย",
+        "address": "ถ. หลวง แขวงป้อมปราบ เขตป้อมปราบศัตรูพ่าย กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6149787,
+          13.6787283
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสวนหลวง สุขุมวิท 103 อุดมสุข",
+        "rating": 4.2,
+        "district": "เขตบางนา",
+        "address": "เลขทึ่ 59 13 ซอย อุดมสุข 11 เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6083626,
+          13.642589
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงหมูกรอบ บะหมี่ เกี๊ยว เกาเหลา อาหารตามสั่ง",
+        "rating": 3,
+        "district": "",
+        "address": "159 สุขุมวิท 113 สำโรงเหนือ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5459179,
+          13.7016546
+        ]
+      },
+      "properties": {
+        "name": "ร้านเจ๊ไหม ข้าวหมูแดง พระราม 3",
+        "rating": 4.1,
+        "district": "เขตยานนาวา",
+        "address": "501 91-93 ถ. พระรามที่ 3 แขวงช่องนนทรี เขตยานนาวา กรุงเทพมหานคร 10120",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5893425,
+          13.6763565
+        ]
+      },
+      "properties": {
+        "name": "ร้านแม่จันทร์ฟอง",
+        "rating": 4.6,
+        "district": "เขตบางนา",
+        "address": "521 ถนน สรรพาวุธ แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6300517,
+          13.754352
+        ]
+      },
+      "properties": {
+        "name": "ม้อเจ้าเก่า หน้า รพ. จุฬา ซ.หัวหมาก 27",
+        "rating": 4,
+        "district": "",
+        "address": "2098, 1066 หัวหมาก 27 แขวงหัวหมาก บางกะปิ กรุงเทพมหานคร 10240",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5111925,
+          13.7410185
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงเท็กซัส(ไม่มีสาขา) moodang texas rice",
+        "rating": 3.8,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "ถนน ผดุงด้าว แขวงสัมพันธวงศ์ เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5243694,
+          13.7089477
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสีมรกต สาขาเซนต์หลุยส์",
+        "rating": 4.2,
+        "district": "เขตสาทร",
+        "address": "94 96 ถนน เย็นจิต แขวงทุ่งวัดดอน เขตสาทร กรุงเทพมหานคร 10120",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.616717,
+          13.7465416
+        ]
+      },
+      "properties": {
+        "name": "ข้าวขาหมูข้าวหมูแดงหมูกรอบ by แจ็ควิน",
+        "rating": 4.6,
+        "district": "",
+        "address": "47,49,51,53 ซ. รามคำแหง 24 แยก 2 แขวงหัวหมาก บางกะปิ กรุงเทพมหานคร 10240",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5967687,
+          13.5913055
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสูตรโบราณปากน้ำ สมุทรปราการ​",
+        "rating": 4.4,
+        "district": "",
+        "address": "198 ถนน ประโคนชัย ตำบลปากน้ำ อำเภอเมืองสมุทรปราการ สมุทรปราการ 10270",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.526668,
+          13.710353
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสีลม",
+        "rating": 3.9,
+        "district": "เขตสาทร",
+        "address": "PG6G+4MV ซ. จันทน์ 23/2 แขวงทุ่งวัดดอน เขตสาทร กรุงเทพมหานคร 10120",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4941335,
+          13.6947882
+        ]
+      },
+      "properties": {
+        "name": "ปฐมชัยโภชนา ข้าวหมูแดง นครปฐม",
+        "rating": 4.2,
+        "district": "เขตบางคอแหลม",
+        "address": "2456 ถ. เจริญกรุง แขวงบางคอแหลม เขตบางคอแหลม กรุงเทพมหานคร 10120",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4715787,
+          13.6795462
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงพุทธบูชา",
+        "rating": 4.3,
+        "district": "เขตจอมทอง",
+        "address": "14, 19-20 ถนน พุทธบูชา แขวงบางมด เขตจอมทอง กรุงเทพมหานคร 10150",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4865935,
+          13.7555146
+        ]
+      },
+      "properties": {
+        "name": "ข้าวด้งหมูแดง เตาถ่าน ศิริราช วังหลัง",
+        "rating": 4.7,
+        "district": "เขตบางกอกน้อย",
+        "address": "ซอย วัดระฆัง แขวงศิริราช เขตบางกอกน้อย กรุงเทพมหานคร 10700",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4754482,
+          13.7194997
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงเจ้ลี เจ้าเก่า ต้นซอยเทอดไท 33 ตลาดพลู สูตรโบราณ ท่าดินแดง",
+        "rating": 4.6,
+        "district": "เขตธนบุรี",
+        "address": "7, 4 ซอย เทอดไท 33 แขวงตลาดพลู เขตธนบุรี กรุงเทพมหานคร 10600",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5420438,
+          13.759101
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงปฐมเลิศรส ซอยรางน้ำ",
+        "rating": 4.2,
+        "district": "เขตราชเทวี",
+        "address": "107/9 ถนน รางน้ำ แขวงถนนพญาไท เขตราชเทวี กรุงเทพมหานคร 10400",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5264748,
+          13.7345939
+        ]
+      },
+      "properties": {
+        "name": "ลือชาข้าวหมูแดงนครปฐมสามย่าน",
+        "rating": 4,
+        "district": "เขตปทุมวัน",
+        "address": "211 ซอย จุฬาลงกรณ์ 48 แขวงวังใหม่ เขตปทุมวัน กรุงเทพมหานคร 10330",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5966541,
+          13.8079804
+        ]
+      },
+      "properties": {
+        "name": "ธานี ข้าวหมูแดง หมูกรอบ โชคชัย 4 (TANEE)",
+        "rating": 4.2,
+        "district": "",
+        "address": "296 ซอย 28 แขวงลาดพร้าว ลาดพร้าว กรุงเทพมหานคร 10230",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5063569,
+          13.7428802
+        ]
+      },
+      "properties": {
+        "name": "ร้านข้าวหมูแดง นายโอว เจ้าเก่า",
+        "rating": 4.2,
+        "district": "เขตสัมพันธวงศ์",
+        "address": "ซ เยาวราช 23 แขวงจักรวรรดิ์ เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4618899,
+          13.6996741
+        ]
+      },
+      "properties": {
+        "name": "นครปฐม ข้าวหมูแดง",
+        "rating": 5,
+        "district": "เขตจอมทอง",
+        "address": "แขวงบางขุนเทียน เขตจอมทอง กรุงเทพมหานคร 10150",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4989294,
+          13.6780065
+        ]
+      },
+      "properties": {
+        "name": "ร้านข้าวหมูแดง บางปะกอก (แพนด้า)",
+        "rating": 4.2,
+        "district": "เขตราษฎร์บูรณะ",
+        "address": "867 ถ. สุขสวัสดิ์ แขวงบางปะกอก เขตราษฎร์บูรณะ กรุงเทพมหานคร 10140",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5214389,
+          13.7073872
+        ]
+      },
+      "properties": {
+        "name": "ศรีแก้ว ข้าวหมูแดงหมูกรอบ",
+        "rating": 5,
+        "district": "เขตสาทร",
+        "address": "ติดกับ ธนาคารไทยพาณิชย์ 28/1 692 ถ. จันทน์ แขวงทุ่งวัดดอน เขตสาทร กรุงเทพมหานคร 10120",
+        "pricing": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4444088,
+          13.6868338
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง เวิ้งนครเขษม",
+        "rating": 4.2,
+        "district": "เขตจอมทอง",
+        "address": "เลขที่ 126/17 ถ. เอกชัย แขวงบางขุนเทียน เขตจอมทอง กรุงเทพมหานคร 10150",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4887197,
+          13.794488
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดง-หมูกรอบเจ๊ณี สาขาบางพลัด",
+        "rating": 4.6,
+        "district": "",
+        "address": "ติดวัดเพลงบางพลัด 1947 ซ. จรัญสนิทวงศ์ 75 แขวงบางพลัด บางพลัด กรุงเทพมหานคร 10700",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4986774,
+          13.7508772
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงสนามหลวง",
+        "rating": 4.5,
+        "district": "เขตพระนคร",
+        "address": "QF2X+9F3 ซอย สุขา 1 แขวงวัดราชบพิธ เขตพระนคร กรุงเทพมหานคร 10200",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5013063,
+          13.754709
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงนายชุน",
+        "rating": 3.9,
+        "district": "เขตพระนคร",
+        "address": "142 ถ. ดินสอ แขวงเสาชิงช้า เขตพระนคร กรุงเทพมหานคร 10200",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6046233,
+          13.6616399
+        ]
+      },
+      "properties": {
+        "name": "นนท์บะหมี่เกี๊ยว ลาซาล",
+        "rating": 4.1,
+        "district": "เขตบางนา",
+        "address": "95/20 ถ. สุขุมวิท แขวงบางนาใต้ เขตบางนา กรุงเทพมหานคร 10260",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6480938,
+          13.7620805
+        ]
+      },
+      "properties": {
+        "name": "รุ่งสุรีย์โภชนา(เจ้าเก่าย้ายมาจากสวนสน)",
+        "rating": 4.4,
+        "district": "",
+        "address": "36 ซอย รามคำแหง 58/4 แขวงหัวหมาก บางกะปิ กรุงเทพมหานคร 10240",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.600165,
+          13.782829
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงหมูกรอบ เจ๊ณี บางพลัด สาขา3",
+        "rating": 4.6,
+        "district": "เขตวังทองหลาง",
+        "address": "50 ซอย ลาดพร้าว 80 แยก 22 แขวงวังทองหลาง เขตวังทองหลาง กรุงเทพมหานคร 10310",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5404075,
+          13.8369959
+        ]
+      },
+      "properties": {
+        "name": "เฮียเล็ก ข้าวหมูแดง หมูกรอบ",
+        "rating": 4.5,
+        "district": "",
+        "address": "1058 ถ. ประชาชื่น แขวงวงศ์สว่าง บางซื่อ กรุงเทพมหานคร 10800",
+        "pricing": "฿1-200 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4767867,
+          13.7206843
+        ]
+      },
+      "properties": {
+        "name": "ข้าวหมูแดงนายอ้า",
+        "rating": 3.9,
+        "district": "เขตธนบุรี",
+        "address": "922 ถ. เทอดไท แขวงตลาดพลู เขตธนบุรี กรุงเทพมหานคร 10600",
+        "pricing": "฿1-100 ต่อคน"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.510349,
+          13.6612064
+        ]
+      },
+      "properties": {
+        "name": "มู๋หมู ข้าวขาหมูหมูแดงหมูกรอบ",
+        "rating": "",
+        "district": "เขตทุ่งครุ",
+        "address": "17/217 มบ ซอย สุขสวัสดิ์วัฒนา แขวงบางมด เขตทุ่งครุ กรุงเทพมหานคร 10140",
+        "pricing": ""
+      }
+    }
+  ]
+}

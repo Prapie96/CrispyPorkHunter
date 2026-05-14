@@ -13,14 +13,14 @@ export default function SearchBox({
   onSelected,
 }: SearchBoxProps) {
   return (
-    <div className="m-3 h-12 relative group">
+    <div className="mx-3 my-3 h-12 relative group">
       <input
         id="search-input"
         type="text"
         value={search}
         onChange={(e) => onSearch(e.target.value)}
         placeholder="ค้นหาร้านหมูกรอบสุดเด็ด ค้นหาตามเขต"
-        className=" bg-stone-50 p-2 pl-8 w-full h-full rounded-md text-black border border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all shadow-sm"
+        className=" p-2 pl-8 w-full h-full rounded-md text-black border border-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all shadow-sm"
       />
       {search && (
         <IoMdClose

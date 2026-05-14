@@ -24,7 +24,7 @@ export default function FloatSelected({ store }: FloatSelectedProps) {
       <div className="flex-1 p-4">
         <DetailStore store={store} />
 
-        <div className="flex p-2 bg-amber-50 sticky bottom-0 z-10 place-items-center ">
+        <div className="flex p-2 bg-amber-50 sticky bottom-0 z-10 justify-center ">
           <ButtonUI
             variant="primary"
             size="md"

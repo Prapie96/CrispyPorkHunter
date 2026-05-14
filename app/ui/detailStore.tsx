@@ -20,13 +20,17 @@ import Image from "next/image";
 import { useRef } from "react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { useHandleToggle } from "../hooks/useToggle";
+import { scrollHorizontal } from "../utlis/helper";
+import ButtonUI from "./buttonUI";
 interface DetailStoreProps {
   store: StoreData;
 }
 
 export default function DetailStore({ store }: DetailStoreProps) {
   const savedControl = useHandleToggle("saved", store);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const sizeIcon = 20;
+
   const today = new Date().toLocaleString("th-TH", { weekday: "long" });
   const checkDay = store.opening_hours.find((open) => open.day === today);
   const checkOpeningToday = () => {
@@ -37,18 +41,7 @@ export default function DetailStore({ store }: DetailStoreProps) {
       return `วันนี้ร้านเปิด: ${checkDay.time}`;
     }
   };
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo =
-        direction === "left" ? scrollLeft - 300 : scrollLeft + 300;
-      scrollRef.current.scrollTo({
-        left: scrollTo,
-        behavior: "smooth",
-      });
-    }
-  };
+
   const detailsList = [
     {
       icon: FaMoneyBill1Wave,
@@ -83,89 +76,100 @@ export default function DetailStore({ store }: DetailStoreProps) {
 
   return (
     <div className="grid grid-cols-1 gap-4">
-      <h1 className="text-2xl text-center">{store.name}</h1>
-      <div className=" flex mx-5 gap-5 justify-end ">
-        {/* <FaBookmark /> */}
-        <button
-          className="hover:cursor-pointer place-items-center text-sm"
-          onClick={savedControl.handleToggle}
-        >
-          <FaBookmark
-            size={20}
-            color={savedControl.toggle ? "orange" : "grey"}
-          />
-          บันทึกร้าน
-        </button>
+      <header className="space-y-4">
+        <h1 className="text-2xl text-center">{store.name}</h1>
 
-        <a
-          className="hover:cursor-pointer place-items-center text-sm"
-          href={store.mapUrl}
-          target="_blank"
-        >
-          <FaMapMarkedAlt size={20} color="blue" />
-          Google Map
-        </a>
-      </div>
-      {detailsList.map((detail, index) => (
-        <DetailStoreWithIcon
-          key={index}
-          icon={detail.icon}
-          sizeIcon={sizeIcon}
-          detailStore={detail.value}
-          color={detail.color}
-        />
-      ))}
-      <div className="grid grid-cols-7 gap-4 border-y-2 border-amber-400">
+        <div className="flex justify-between items-center">
+          <ButtonUI
+            variant="ghost"
+            onClick={savedControl.handleToggle}
+            size={"sm"}
+            className="ml-0 inline-flex flex-col gap-1 items-center hover:bg-amber-100 rounded-2xl"
+          >
+            <FaBookmark
+              size={20}
+              color={savedControl.toggle ? "orange" : "grey"}
+            />
+            บันทึกร้าน
+          </ButtonUI>
+          <a
+            className="inline-flex flex-col items-center justify-center p-2
+             hover:bg-gray-100 rounded-2xl transition-colors focus:outline-none"
+            href={store.mapUrl}
+            target="_blank"
+          >
+            <FaMapMarkedAlt size={20} color="blue" />
+            Google Map
+          </a>
+        </div>
+      </header>
+      <section className="space-y-4">
+        {detailsList.map((detail, index) => (
+          <DetailStoreWithIcon
+            key={index}
+            icon={detail.icon}
+            sizeIcon={sizeIcon}
+            detailStore={detail.value}
+            color={detail.color}
+          />
+        ))}
+      </section>
+
+      <section className="grid grid-cols-7 gap-4 border-y-2 border-amber-400">
         {store.opening_hours.map((day) => (
           <div key={day.day} className="flex flex-col items-center">
             <span className="font-bold">{day.day.slice(3)}</span>
             <span className="text-sm text-gray-600">{day.time}</span>
           </div>
         ))}
-      </div>
+      </section>
 
-      <div className="flex gap-2 text-xl items-center">
-        <BiSolidFoodMenu size={sizeIcon} />
-        <span>เมนู Hilight</span>
-      </div>
-
-      <div className="relative group">
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md hover:bg-white transition-all opacity-0 group-hover:opacity-100"
-        >
-          <FaChevronLeft size={sizeIcon + 5} color="black" />
-        </button>
-
-        <div ref={scrollRef} className="flex flex-1 gap-2 overflow-auto">
-          {store.menu_highlights.map((menu) => (
-            <div className="relative flex shrink-0 cursor-grab">
-              <Image
-                src={menu.menu_image}
-                alt={menu.menu_name}
-                width={400}
-                height={400}
-                className="rounded-xl object-cover w-full h-full"
-                priority
-              />
-
-              <div className="absolute bottom-0 right-0 p-2 bg-linear-to-t from-black/70 to-transparent rounded-b-lg">
-                <span className="text-white text-sm block truncate">
-                  {menu.menu_name}
-                </span>
-              </div>
-            </div>
-          ))}
+      <section className="space-y-3">
+        <div className="flex gap-2 text-xl items-center">
+          <BiSolidFoodMenu size={sizeIcon} />
+          <span>เมนู Hilight</span>
         </div>
 
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md hover:bg-white transition-all opacity-0 group-hover:opacity-100"
-        >
-          <FaChevronRight size={sizeIcon + 5} color="black" />
-        </button>
-      </div>
+        <div className="relative group">
+          <button
+            onClick={() => scrollHorizontal("left", scrollRef)}
+            className="absolute left-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
+             hover:bg-white transition-all opacity-0 group-hover:opacity-100"
+          >
+            <FaChevronLeft size={sizeIcon + 5} color="black" />
+          </button>
 
+          <div ref={scrollRef} className="flex flex-1 gap-2 overflow-auto">
+            {store.menu_highlights.map((menu) => (
+              <div className="relative flex shrink-0 cursor-grab">
+                <Image
+                  src={menu.menu_image}
+                  alt={menu.menu_name}
+                  width={400}
+                  height={400}
+                  className="rounded-xl object-cover w-full h-full"
+                  priority
+                />
+
+                <div className="absolute bottom-0 right-0 p-2 bg-linear-to-t from-black/70 to-transparent rounded-b-lg">
+                  <span className="text-white text-sm block truncate">
+                    {menu.menu_name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button
+            onClick={() => scrollHorizontal("right", scrollRef)}
+            className="absolute right-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
+             hover:bg-white transition-all opacity-0 group-hover:opacity-100"
+          >
+            <FaChevronRight size={sizeIcon + 5} color="black" />
+          </button>
+          
+        </div>
+      </section>
       {/**Reviews */}
       <strong className="text-xl">ตัวอย่าง Reviews </strong>
       <div className="bottom-2 flex flex-col gap-2 p-2">

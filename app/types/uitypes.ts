@@ -11,3 +11,5 @@ export type ActionButtonLocalStorage = Exclude<ModeSideBar,"default">;
 export type VariantType = 'primary' | 'secondary' | 'ghost';
 export type SizeButton = 'sm' | 'md' | 'lg';
 export type StatusButtonTypes = 'disabled' | 'enabled' ; 
+
+export type Distance = "left" | "right";

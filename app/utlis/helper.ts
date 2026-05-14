@@ -1,9 +1,9 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, RefObject, SetStateAction } from "react";
 import { InitialLocationType, StoreData } from "../types/maptypes";
+import { Distance } from "../types/uitypes";
 
 export function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
   const r = 6371;
-  //1.เปลี่ยนองศาเป็น Radiant
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLon = ((lon2 - lon1) * Math.PI) / 180;
   const rLat1 = (lat1 * Math.PI) / 180;
@@ -33,3 +33,16 @@ export const countDistrict = (listData:StoreData[])=>{
     return acc;
   }, {});
 }
+
+
+export const scrollHorizontal = (direction: Distance,scrollRef:RefObject<HTMLDivElement | null>) => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo =
+        direction === "left" ? scrollLeft - 300 : scrollLeft + 300;
+      scrollRef.current.scrollTo({
+        left: scrollTo,
+        behavior: "smooth",
+      });
+    }
+  };

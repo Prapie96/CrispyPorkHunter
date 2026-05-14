@@ -1,7 +1,5 @@
 import { StoreData } from "@/app/types/maptypes";
 import { ModeSideBar } from "@/app/types/uitypes";
-import { useState, useEffect, useMemo } from "react";
-import StatCard from "../Card/storeCard";
 import StatCardWrapper from "../Card/storeCardWrapper";
 import { countDistrict } from "@/app/utlis/helper";
 import { displayTextMode } from "@/app/const/variant";
@@ -29,7 +27,7 @@ export default function StoreList({
   };
 
   return (
-    <div className="text-black w-full h-full">
+    <div className="text-black w-full h-full text-sm sm:text-base">
       {/* ---show title Mode --- */}
       <p className="p-4 text-xl ">
         {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}

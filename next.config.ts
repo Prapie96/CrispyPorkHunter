@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         pathname: '/v1/**',
       },
     ]
-  }
+  },
+  allowedDevOrigins: ["http://192.168.1.44:3000"],
 };
-
 export default nextConfig;

@@ -12,7 +12,7 @@ export default function LogoSection() {
           height={80}
         />
         <strong
-          className={`${lusitana.className} antialiased text-3xl  text-white`}
+          className={`${lusitana.className} antialiased md:text-2xl lg:text-3xl  text-white`}
         >
           Crispy Pork Hunter
         </strong>

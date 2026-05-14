@@ -28,13 +28,13 @@ export default function FloatSelected({ store }: FloatSelectedProps) {
           <ButtonUI
             variant="primary"
             size="md"
-            title={
+            onClick={huntedControl.handleToggle}
+            className={`${huntedControl.toggle ? "bg-green-600" : null}`}
+            children={
               huntedControl.toggle
                 ? "พิชิตร้านนี้แล้ว!"
                 : "คุณล่าร้านนี้หรือยัง?"
             }
-            onClick={huntedControl.handleToggle}
-            className={`${huntedControl.toggle ? 'bg-green-600' : null}`}
           />
         </div>
       </div>

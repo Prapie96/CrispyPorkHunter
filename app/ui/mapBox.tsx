@@ -10,12 +10,14 @@ interface MapBoxProps {
   shops: StoreData[];
   selected: StoreData | undefined;
   onSelected: (shop: StoreData) => void;
+  sideBarVisible : boolean;
 }
 
 export default function MapBox({
   shops,
   selected,
   onSelected,
+  sideBarVisible
 }: MapBoxProps) {
   const isSelectedInShops = shops.some((shop) => shop.name === selected?.name);
   const [viewState, setViewState] = useState(initialLocation);
@@ -33,6 +35,14 @@ export default function MapBox({
       });
     }
   }, [selected]);
+
+  useEffect(()=>{
+    const map = mapRef.current;
+    setTimeout(()=>{
+      map?.resize();
+    },350)
+  },[sideBarVisible])
+
 
   return (
     <Map

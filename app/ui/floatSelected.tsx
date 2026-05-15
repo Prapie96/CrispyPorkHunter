@@ -29,7 +29,7 @@ export default function FloatSelected({ store }: FloatSelectedProps) {
             variant="primary"
             size="md"
             onClick={huntedControl.handleToggle}
-            className={`${huntedControl.toggle ? "bg-green-600" : null}`}
+            className={`${huntedControl.toggle ? "bg-green-600" : ""}`}
             children={
               huntedControl.toggle
                 ? "พิชิตร้านนี้แล้ว!"

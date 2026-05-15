@@ -17,12 +17,15 @@ export function useStore() {
     const updateData = () => {
       const sourceMode = mode === "statistic" ? "hunt" : mode; // if mode === statistic will use data from mode hunt
       const data = localStorage.getItem(sourceMode); // get data using key from mode
-      setStoreInLocalstorage(data ? JSON.parse(data) : []); //set data into state
+      const parsedData : string[] = data ? JSON.parse(data) : [];
+      const nameSet = new Set(parsedData);
+      const mappedStores = allSortData.filter((store)=> nameSet.has(store.name));
+      setStoreInLocalstorage(mappedStores); //set data into state
     };
     updateData(); //call to use function
     window.addEventListener("storage", updateData); //add event listener
     return () => window.removeEventListener("storage", updateData); //clear EventListener
-  }, [mode]);
+  }, [mode,storeInLocalStrage]);
 
   //listener when data cleared
   const clearHistory = (targetMode:Exclude<ModeSideBar,"default" | "statistic">)=>{

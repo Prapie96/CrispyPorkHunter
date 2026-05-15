@@ -29,12 +29,12 @@ export default function HomeClient() {
   const disabledLoadMore = displayStores.length === 0;
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
-    <div className="bg-stone-50 h-screen overflow-hidden ">
+    <div className="bg-stone-50 h-dvh w-screen overflow-hidden relative">
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className={`absolute top-4  z-60 bg-amber-500 text-white p-2 rounded-md shadow-md hover:bg-amber-600 
+        className={`absolute top-[calc(1rem+env(safe-area-inset-top))]  z-50 bg-amber-500 text-white p-2 rounded-md shadow-md hover:bg-amber-600 
             transition-colors
-            ${isSidebarOpen ? "left-96" : "left-2"}
+            ${isSidebarOpen ? "left-[calc(75vw+8px)] sm:left-96" : "left-2"}
             `}
         title={isSidebarOpen ? "Close Sidebar" : "Open Sidebar"}
       >

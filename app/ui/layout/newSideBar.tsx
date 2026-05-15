@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import LogoSection from "../logoSection";
 
 interface NewSideBarProps {

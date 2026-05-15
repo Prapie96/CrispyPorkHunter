@@ -19,7 +19,7 @@ export const statusButtonMapStyles : Record<StatusButtonTypes,string>={
 
 
  export const displayTextMode: Record<ModeSideBar, string> = {
-    default: "ร้านหมูกรอบใกล้ฉัน",
+    default: "ร้านหมูกรอบแนะนำ",
     saved: "ร้านที่บันทึก",
     hunt: "ร้านที่ล่าไปแล้ว",
     statistic: "สถิติ",

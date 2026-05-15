@@ -16,15 +16,15 @@ export default function FloatPage({
 }: FloatPageProps) {
   return (
     <div
-      className={`mb-5 fixed z-60 md:left-104 mt-4 ml-2 flex items-center
+      className={`mb-5 fixed z-60 lg:left-100 mt-4 ml-2 flex items-center
                       transition-all duration-500 ease-in-out left-0
                       top-[calc(1rem+env(safe-area-inset-top))]
-                      h-[calc(100dvh-2.5rem-env(safe-area-inset-top))]
+                      h-[calc(100dvh-3rem-env(safe-area-inset-top))]
                       ${selectedStore ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"}
                     `}
     >
       <div
-        className="relative w-96 h-full flex flex-col bg-amber-50 rounded-xl shadow-md text-black
+        className="relative w-80 sm:w-96 h-full flex flex-col bg-amber-50 rounded-xl shadow-md text-black
             overflow-auto 
           "
       >

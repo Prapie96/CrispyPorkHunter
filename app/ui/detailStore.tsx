@@ -115,11 +115,11 @@ export default function DetailStore({ store }: DetailStoreProps) {
         ))}
       </section>
 
-      <section className="grid grid-cols-7 gap-4 border-y-2 border-amber-400">
-        {store.opening_hours.map((day) => (
-          <div key={day.day} className="flex flex-col items-center">
-            <span className="font-bold">{day.day.slice(3)}</span>
-            <span className="text-sm text-gray-600">{day.time}</span>
+      <section className="grid grid-col-1 sm:grid-cols-7 gap-4 border-y-2 border-amber-400">
+        {store.opening_hours.map((opening) => (
+          <div key={opening.day} className="flex flex-col items-center">
+            <span className="font-bold">{opening.day.replace("วัน", "")}</span>
+            <span className="text-sm text-gray-600">{opening.time}</span>
           </div>
         ))}
       </section>
@@ -133,21 +133,23 @@ export default function DetailStore({ store }: DetailStoreProps) {
         <div className="relative group">
           <button
             onClick={() => scrollHorizontal("left", scrollRef)}
-            className="absolute left-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
+            className="hidden sm:absolute sm:block left-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
              hover:bg-white transition-all opacity-0 group-hover:opacity-100"
           >
             <FaChevronLeft size={sizeIcon + 5} color="black" />
           </button>
 
-          <div ref={scrollRef} className="flex flex-1 gap-2 overflow-auto">
+          <div ref={scrollRef} className="flex gap-3 overflow-x-auto py-1 no-scrollbar scroll-smooth">
             {store.menu_highlights.map((menu) => (
-              <div className="relative flex shrink-0 cursor-grab">
+              <div className="relative flex shrink-0 w-44 h-44 sm:w-56 sm:h-56 rounded-xl overflow-hidden shadow-xs">
                 <Image
                   src={menu.menu_image}
                   alt={menu.menu_name}
-                  width={400}
-                  height={400}
-                  className="rounded-xl object-cover w-full h-full"
+                  // width={400}
+                  // height={400}
+                  sizes="(max-width: 640px) 176px, 224px"
+                  fill
+                  className=" object-cover"
                   priority
                 />
 
@@ -162,7 +164,7 @@ export default function DetailStore({ store }: DetailStoreProps) {
 
           <button
             onClick={() => scrollHorizontal("right", scrollRef)}
-            className="absolute right-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
+            className="hidden sm:absolute sm:block right-2 top-1/2 -translate-y-3/4 z-10 bg-white/80 p-1 rounded-full shadow-md
              hover:bg-white transition-all opacity-0 group-hover:opacity-100"
           >
             <FaChevronRight size={sizeIcon + 5} color="black" />

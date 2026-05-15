@@ -23,7 +23,8 @@ export default function StoreList({
   const huntedDistrict = countDistrict(storeList);
 
   const renderEmptyData = () => {
-    if ((mode === "statistic" || mode === "saved") && storeList.length === 0) return "ยังไม่มีประวัติการกิน";
+    if ((mode === "statistic" || mode === "hunt") && storeList.length === 0) return "ยังไม่มีประวัติการกิน";
+    if((mode === "saved") && storeList.length === 0)return "ไม่พบประวัติร้านที่บันทึกไว้"
     if (storeList.length === 0) return "ไม่พบข้อมูลร้าน";
     return null;
   };
@@ -33,7 +34,7 @@ export default function StoreList({
       {/* ---show title Mode  & Button--- */}
       <header className="flex justify-between p-4">
         <p className="text-xl ">
-          {displayTextMode[mode] ?? "ร้านหมูกรอบใกล้ฉัน"}
+          {displayTextMode[mode] ?? "ร้านหมูกรอบแนะนำ"}
         </p>
        <div className="flex justify-end">
     {(mode === "saved" || mode === "hunt") && <ButtonUI variant="secondary" size="sm" onClick={()=>onClearHistory(mode)}>

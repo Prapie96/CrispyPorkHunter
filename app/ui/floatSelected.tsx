@@ -21,7 +21,7 @@ export default function FloatSelected({ store }: FloatSelectedProps) {
         className="object-cover"
         priority
       />
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4 pb-10">
         <DetailStore store={store} />
 
         <div className="flex p-2 bg-amber-50 sticky bottom-0 z-10 justify-center ">

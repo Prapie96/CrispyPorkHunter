@@ -4,7 +4,7 @@ import Logo from "./ui/Logo";
 import ListShops from "./ui/ListShops";
 import NavBar from "./ui/NavBar";
 import SearchBar from "./ui/SearchBar";
-import {useState } from "react";
+import { useState } from "react";
 import rawShops from "./consts/places.json";
 import { StoreData } from "./types/shop_types";
 import MapRender from "./ui/MapRender";
@@ -12,7 +12,7 @@ import { useSearchParams } from "next/navigation";
 import FloatPage from "./ui/FloatPage";
 import { FaCaretLeft } from "react-icons/fa6";
 import { sizeIcon } from "./consts/const";
-import {ModeSelector } from "./types/mode_types";
+import { ModeSelector } from "./types/mode_types";
 import { filterShopsByModeAndSearch } from "./utils/helper";
 import useShopsStorage from "./hooks/useShops";
 
@@ -28,9 +28,14 @@ export default function Home() {
   //Custom hook for logic shops in Localstorage
   const { localShopStorage, handleToggleLocalStorage, handleClearStorage } =
     useShopsStorage();
+  //add id by index for match with images files
+  const addIdIntoRawShops = rawShops.map((shop, index) => ({
+    ...shop,
+    id: index,
+  }));
 
   const shopByModeAndSearch = filterShopsByModeAndSearch({
-    rawShops,
+    rawShops: addIdIntoRawShops,
     mode,
     search,
     storage: localShopStorage,
@@ -68,23 +73,26 @@ export default function Home() {
           onClearShops={handleClearStorage}
         />
       </aside>
-      {selectedShop && (
-        <div className="relative left-4">
-          <FloatPage
-            shop={selectedShop}
-            onSelected={setSelectedShop}
-            onToggle={handleToggleLocalStorage}
-            isActive={localShopStorage.Hunt?.includes(selectedShop.name)}
-            isSaved={localShopStorage.Save.includes(selectedShop.name)}
-          />
-          <button
-            className="bg-amber-600 absolute py-4 left-96 z-40 top-1/2 rounded-r-2xl hover:cursor-pointer hover:bg-amber-700"
-            onClick={() => setSelectedShop(null)}
-          >
-            <FaCaretLeft size={sizeIcon} color={"white"} />
-          </button>
-        </div>
-      )}
+      <div
+        className={`relative z-50 transition-all duration-300 ease-in-out
+          ${selectedShop ? "left-4 w-auto opacity-100" : "-left-96 w-0 opacity-0 pointer-events-none"}
+        `}
+      >
+        <FloatPage
+          shop={selectedShop}
+          onSelected={setSelectedShop}
+          onToggle={handleToggleLocalStorage}
+          isActive={localShopStorage.Hunt?.includes(selectedShop?.name ?? "")}
+          isSaved={localShopStorage.Save.includes(selectedShop?.name ?? "")}
+        />
+        <button
+          className="absolute py-4 left-96 z-40 top-1/2 -translate-y-1/2 rounded-r-2xl bg-amber-600 
+          hover:cursor-pointer hover:bg-amber-700"
+          onClick={() => setSelectedShop(null)}
+        >
+          <FaCaretLeft size={sizeIcon} color={"white"} />
+        </button>
+      </div>
       <main className="bg-stone-200 flex-1 relative">
         <MapRender
           shops={filteredShops}

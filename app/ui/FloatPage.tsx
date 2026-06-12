@@ -76,7 +76,7 @@ export default function FloatPage({
     ],
     [shop, openingStatus, isOpen],
   );
-
+  const thumbNailPath = `/nextjs_places_images/shop_${shop.id}_thumbnail.jpg`;
   return (
     <div className="bg-amber-50 top-4 bottom-4 px-4 pt-4  w-96 absolute z-50 rounded-2xl overflow-y-auto flex flex-col">
       {/* Close Button */}
@@ -84,16 +84,16 @@ export default function FloatPage({
         className="absolute right-4 hover:cursor-pointer hover:opacity-70"
         onClick={() => onSelected(null)}
       >
-        <IoMdClose size={sizeIcon + 10} color="black" />
+        <IoMdClose size={sizeIcon + 10} color={"black"}/>
       </button>
-      <section className="text-black text-center flex flex-col gap-3">
+      <section className="text-black text-center flex flex-col gap-3 pt-8">
         <Image
           //   src={changeGoogleImageUrl(shop.thumbnail)}
-          src={"/vercel.svg"}
+          src={thumbNailPath}
           alt={shop.name}
           width={400}
           height={400}
-          className="object-cover rounded-xl bg-amber-500"
+          className="object-cover rounded-md"
           priority
         />
         <section className="flex justify-between items-center">

@@ -16,6 +16,7 @@ export type menu_highlightsType = {
   menu_image:string
 }
 export type StoreData = {
+  id:number,
   name : string,
   thumbnail: string,
   district: string| null

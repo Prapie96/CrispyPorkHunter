@@ -1,3 +1,5 @@
+import { ModeSelector } from "./mode_types";
+
 export type LocationStore = {
   address : string,
   lat : number,
@@ -26,4 +28,18 @@ export type StoreData = {
   menu_highlights : menu_highlightsType[],
   mapUrl: string,
   _complete:boolean | null
+}
+
+
+export interface StorageLists {
+  Save: string[];
+  Hunt: string[];
+}
+
+
+export interface FilterShopsProps{
+  rawShops: StoreData[],
+  mode: string,
+  search: string,
+  storage: StorageLists
 }

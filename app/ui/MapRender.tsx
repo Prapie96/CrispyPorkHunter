@@ -45,7 +45,7 @@ export default function MapRender({ shops, selected , onSelected,toggleVisible}:
           longitude={shop.location.lng}
           latitude={shop.location.lat}
           onClick={()=>onSelected(shop)}
-          className="hover: cursor-pointer"
+          className="hover: cursor-pointer flex flex-col justify-center items-center"
         >
           <Image
             src="/PinCripyPorkMap.png"

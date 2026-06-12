@@ -3,15 +3,16 @@ import { StoreData } from "../types/shop_types";
 
 interface ShopCardsProps {
   shop: StoreData;
+  selected:StoreData | null;
   onClick: Dispatch<SetStateAction<StoreData | null>>;
 }
 
-export default function ShopCards({ shop, onClick }: ShopCardsProps) {
+export default function ShopCards({ shop , selected, onClick }: ShopCardsProps) {
   return (
     <div
-      className={`bg-amber-100 w-full p-4 rounded-md text-black
+      className={`w-full p-4 rounded-md 
      hover:bg-gray-300 hover:cursor-pointer shadow-sm
-       
+       ${selected?.name === shop.name ? 'bg-linear-to-br from-amber-600 to-orange-700 text-white':'bg-amber-100 text-black' }
      `}
       onClick={()=>onClick(shop)}
     >

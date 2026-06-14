@@ -2,12 +2,12 @@ import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import Map, { Marker, MapRef } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { initialLocation } from "../consts/const";
-import { StoreData } from "../types/shop_types";
+import { ShopData } from "../types/shop_types";
 import Image from "next/image";
 interface MapRenderProps {
-  shops: StoreData[];
-  selected: StoreData | null;
-  onSelected: Dispatch<SetStateAction<StoreData | null>>;
+  shops: ShopData[];
+  selected: ShopData | null;
+  onSelected: Dispatch<SetStateAction<ShopData | null>>;
   toggleVisible:boolean;
 }
 

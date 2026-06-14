@@ -1,10 +1,10 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { StoreData } from "../types/shop_types";
+import { ShopData } from "../types/shop_types";
 
 interface ShopCardsProps {
-  shop: StoreData;
-  selected:StoreData | null;
-  onClick: Dispatch<SetStateAction<StoreData | null>>;
+  shop: ShopData;
+  selected:ShopData | null;
+  onClick: Dispatch<SetStateAction<ShopData | null>>;
 }
 
 export default function ShopCards({ shop , selected, onClick }: ShopCardsProps) {

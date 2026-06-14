@@ -2,13 +2,13 @@
 import { FaCaretLeft } from "react-icons/fa6";
 import FloatPage from "./FloatPage";
 import { sizeIcon } from "../consts/const";
-import { StorageLists, StoreData } from "../types/shop_types";
+import { StorageLists, ShopData } from "../types/shop_types";
 import { ModeLocalStorage } from "../types/mode_types";
 import { Dispatch, SetStateAction } from "react";
 
 interface ShopDetailFloatProps {
-  selectedShop: StoreData | null;
-  onClose: Dispatch<SetStateAction<StoreData | null>>;
+  selectedShop: ShopData | null;
+  onClose: Dispatch<SetStateAction<ShopData | null>>;
   onToggleStorage: (shopName: string, currentMode: ModeLocalStorage) => void;
   localShopStorage: StorageLists;
 }
@@ -23,7 +23,7 @@ export default function ShopDetailFloat({
     <div
       className={`transition-all duration-300 ease-in-out
         absolute top-0 z-50 h-full
-        ${selectedShop ? "opacity-100 left-10 w-full" : "w-0 opacity-0 pointer-events-none -left-full"}
+        ${selectedShop ? "opacity-100 left-6 w-full" : "w-0 opacity-0 pointer-events-none -left-full"}
         
         md:relative md:top-auto md:h-auto md:w-auto
         ${selectedShop ? "md:left-4" : "md:-left-96"}

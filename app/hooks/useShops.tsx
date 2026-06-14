@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StoreData, StorageLists } from "../types/shop_types";
+import {StorageLists } from "../types/shop_types";
 import { keyLocalStorage } from "../consts/const";
 import { ModeLocalStorage } from "../types/mode_types";
 import { saveShopsIntoStorage } from "../utils/helper";

@@ -15,7 +15,7 @@ export default function Detailsbasic({
 }: DetailsbasicProps) {
   const Icon = icon;
   return (
-    <div className="flex gap-4 ">
+    <div className="flex gap-4">
       <Icon size={sizeIcon} color={color}/>
       <p>{detailStore ? detailStore : "ไม่ปรากฎข้อมูล"}</p>
     </div>

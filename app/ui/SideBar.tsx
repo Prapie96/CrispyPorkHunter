@@ -4,19 +4,20 @@ import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
 import ListShops from "./ListShops";
 import { ModeLocalStorage, ModeSelector } from "../types/mode_types";
-import { StoreData } from "../types/shop_types";
+import { ShopData } from "../types/shop_types";
 import { Dispatch, SetStateAction } from "react";
 
 interface SidebarProps {
   isOpen: boolean;
-  shops: StoreData[];
-  selectedShop: StoreData | null;
-  onSelectedShop: Dispatch<SetStateAction<StoreData | null>>;
+  shops: ShopData[];
+  selectedShop: ShopData | null;
+  onSelectedShop: Dispatch<SetStateAction<ShopData | null>>;
   amount: number;
   onLoadMore:  Dispatch<SetStateAction<number>>;
   canLoadMore: boolean;
   currentMode: ModeSelector;
   onClearShops:  (mode: ModeLocalStorage) => void;
+  districtShops: Record<string,number>
 }
 
 export default function Sidebar({
@@ -29,6 +30,7 @@ export default function Sidebar({
   canLoadMore,
   currentMode,
   onClearShops,
+  districtShops
 }: SidebarProps) {
   return (
     <aside
@@ -39,7 +41,7 @@ export default function Sidebar({
         <Logo />
         <NavBar />
       </div>
-      <SearchBar />
+      {currentMode !== "Statistic" && <SearchBar />}
       <ListShops
         shops={shops}
         selected={selectedShop}
@@ -49,6 +51,7 @@ export default function Sidebar({
         canLoadMore={canLoadMore}
         currentMode={currentMode}
         onClearShops={onClearShops}
+        districtShops={districtShops}
       />
     </aside>
   );

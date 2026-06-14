@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { filterShopsByModeAndSearch } from "../utils/helper";
 import { indexedRawShops } from "../consts/const";
 import { ModeSelector } from "../types/mode_types";
-import { StoreData } from "../types/shop_types";
+import { ShopData } from "../types/shop_types";
 import useShopsStorage from "./useShops";
 
 export function useHomeShops() {
@@ -12,7 +12,7 @@ export function useHomeShops() {
   const search = searchParams.get("search") ?? "";
   const mode = (searchParams.get("mode") ?? "") as ModeSelector;
 
-  const [selectedShop, setSelectedShop] = useState<StoreData | null>(null);
+  const [selectedShop, setSelectedShop] = useState<ShopData | null>(null);
   const [amount, setAmount] = useState(10);
 
   const { localShopStorage, handleToggleLocalStorage, handleClearStorage } =
@@ -28,6 +28,16 @@ export function useHomeShops() {
   const filteredShops = shopByModeAndSearch.slice(0, amount);
   const canLoadMore = amount >= shopByModeAndSearch.length;
 
+  // calculate เขต (district counts)
+  const districtShops = shopByModeAndSearch.reduce(
+    (acc, shop) => {
+      const distinct = shop.district ?? "ไม่พบเขต";
+      acc[distinct] = (acc[distinct] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+
   return {
     mode,
     selectedShop,
@@ -39,5 +49,6 @@ export function useHomeShops() {
     localShopStorage,
     handleToggleLocalStorage,
     handleClearStorage,
+    districtShops,
   };
 }

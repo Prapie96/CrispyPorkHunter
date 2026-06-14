@@ -1,13 +1,12 @@
 import React, { Dispatch, SetStateAction, useMemo } from "react";
 import Image from "next/image";
-import { StoreData } from "../types/shop_types";
-import { changeGoogleImageUrl, checkOpeningToday } from "../utils/helper";
+import { ShopData } from "../types/shop_types";
+import { checkOpeningToday } from "../utils/helper";
 import {
   FaBookmark,
   FaMapPin,
   FaMoneyBill1Wave,
   FaStar,
-  FaUser,
 } from "react-icons/fa6";
 import Detailsbasic from "./Detailsbasic";
 import { MdLocalPhone, MdAccessTime } from "react-icons/md";
@@ -22,9 +21,9 @@ import MenuList from "./MenuList";
 import ReviewsList from "./ReviewsList";
 
 interface FloatPageProps {
-  shop: StoreData | null;
+  shop: ShopData | null;
   isActive: boolean;
-  onSelected: Dispatch<SetStateAction<StoreData | null>>;
+  onSelected: Dispatch<SetStateAction<ShopData | null>>;
   onToggle: (shopName: string, currentMode: ModeLocalStorage) => void;
   isSaved: boolean;
 }
@@ -80,20 +79,19 @@ export default function FloatPage({
     [shop, openingStatus, isOpen],
   );
   const thumbNailPath = `/nextjs_places_images/shop_${shop.id}_thumbnail.jpg`;
-  const menuPath = `/nextjs_menues_images/shop_${shop.id}_menu_`;
+  const menuPath = `/menu_images/shop_${shop.id}_img_`;
 
   return (
     <div className="bg-amber-50 top-4 bottom-4 px-4 pt-4  w-96 absolute z-50 rounded-2xl overflow-y-auto flex flex-col">
       {/* Close Button */}
       <button
-        className="absolute right-4 hover:cursor-pointer hover:opacity-70"
+        className="sticky top-0 ml-auto hover:cursor-pointer hover:opacity-70 "
         onClick={() => onSelected(null)}
       >
         <IoMdClose size={sizeIcon + 10} color={"black"} />
       </button>
       <section className="text-black text-center flex flex-col gap-3 pt-8">
         <Image
-          //   src={changeGoogleImageUrl(shop.thumbnail)}
           src={thumbNailPath}
           alt={shop.name}
           width={400}
@@ -123,7 +121,7 @@ export default function FloatPage({
           </a>
         </section>
         <section className={"flex flex-col gap-4 text-left"}>
-          <strong className={"text-2xl"}>{shop.name}</strong>
+          <strong className={"text-xl text-center"}>{shop.name}</strong>
           {detailsList.map((info) => (
             <Detailsbasic
               key={info.id}

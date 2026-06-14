@@ -15,7 +15,7 @@ export type menu_highlightsType = {
   menu_name:string,
   menu_image:string
 }
-export type StoreData = {
+export type ShopData = {
   id:number,
   name : string,
   thumbnail: string,
@@ -39,7 +39,7 @@ export interface StorageLists {
 
 
 export interface FilterShopsProps{
-  rawShops: StoreData[],
+  rawShops: ShopData[],
   mode: string,
   search: string,
   storage: StorageLists

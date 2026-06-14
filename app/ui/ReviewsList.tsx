@@ -10,8 +10,8 @@ export default function ReviewsList({reviews}:ReviewListProps) {
   if (!reviews || reviews.length === 0) return null;
   return (
       <section>
-        <strong className="text-xl text-left pl-2">ตัวอย่าง Reviews</strong>
-        <div className="bottom-2 flex flex-col gap-2 p-2 text-left">
+        <strong className="text-xl">ตัวอย่าง Reviews</strong>
+        <div className="bottom-2 flex flex-col gap-2 p-2">
           {reviews?.map((comment, index) => (
             <div
               key={`review-${index}`}

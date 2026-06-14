@@ -17,7 +17,6 @@ export default function SearchBar() {
     replace(`${pathName}?${params.toString()}`);
   }
 
-  // const [text, setText] = useState("");
   return (
     <div className="mx-4 rounded-md border border-amber-100 shadow-sm
     focus-within:border-amber-700 focus-within:ring-1 focus-within:ring-amber-500">

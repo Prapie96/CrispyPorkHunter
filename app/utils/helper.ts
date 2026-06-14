@@ -71,7 +71,7 @@ export const rankCrispyHunter = (shopCount: number) => {
     };
   } else if (shopCount >= 6) {
     return {
-      label: "นักล่าจานเด็ด",
+      label: "นักล่าร้านเด็ด",
       icon: FaCrosshairs, 
       iconColor: "text-lime-300", 
     };

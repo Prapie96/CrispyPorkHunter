@@ -13,11 +13,11 @@ interface SidebarProps {
   selectedShop: ShopData | null;
   onSelectedShop: Dispatch<SetStateAction<ShopData | null>>;
   amount: number;
-  onLoadMore:  Dispatch<SetStateAction<number>>;
+  onLoadMore: Dispatch<SetStateAction<number>>;
   canLoadMore: boolean;
   currentMode: ModeSelector;
-  onClearShops:  (mode: ModeLocalStorage) => void;
-  districtShops: Record<string,number>
+  onClearShops: (mode: ModeLocalStorage) => void;
+  districtShops: Record<string, number>;
 }
 
 export default function Sidebar({
@@ -30,29 +30,36 @@ export default function Sidebar({
   canLoadMore,
   currentMode,
   onClearShops,
-  districtShops
+  districtShops,
 }: SidebarProps) {
   return (
     <aside
-      className={`bg-yellow-50 flex flex-col gap-4 overflow-y-auto overflow-x-hidden
-        transition-all duration-200 relative ${isOpen ? "w-96" : "w-0"}`}
+      className={`bg-yellow-50 flex flex-col gap-4
+        transition-all duration-200 relative ${isOpen ? "w-72 md:w-96" : "w-0 overflow-hidden"}
+        
+        `}
     >
       <div className="flex flex-col">
         <Logo />
-        <NavBar />
+        <div className="flex flex-col gap-2">
+          <NavBar />
+          {currentMode !== "Statistic" && <SearchBar />}
+        </div>
       </div>
-      {currentMode !== "Statistic" && <SearchBar />}
-      <ListShops
-        shops={shops}
-        selected={selectedShop}
-        onSelected={onSelectedShop}
-        amount={amount}
-        onLoadMore={onLoadMore}
-        canLoadMore={canLoadMore}
-        currentMode={currentMode}
-        onClearShops={onClearShops}
-        districtShops={districtShops}
-      />
+
+      <div className="flex-1 overflow-y-auto">
+        <ListShops
+          shops={shops}
+          selected={selectedShop}
+          onSelected={onSelectedShop}
+          amount={amount}
+          onLoadMore={onLoadMore}
+          canLoadMore={canLoadMore}
+          currentMode={currentMode}
+          onClearShops={onClearShops}
+          districtShops={districtShops}
+        />
+      </div>
     </aside>
   );
 }

@@ -82,15 +82,15 @@ export default function FloatPage({
   const menuPath = `/menu_images/shop_${shop.id}_img_`;
 
   return (
-    <div className="bg-amber-50 top-4 bottom-4 px-4 pt-4  w-96 absolute z-50 rounded-2xl overflow-y-auto flex flex-col">
+    <div className="bg-amber-50 top-4 bottom-4 px-3 pt-2 md:px-4 md:pt-4 w-full md:w-96 absolute z-50 rounded-2xl overflow-y-auto flex flex-col">
       {/* Close Button */}
       <button
-        className="sticky top-0 ml-auto hover:cursor-pointer hover:opacity-70 "
+        className="sticky top-0 ml-auto hover:cursor-pointer hover:opacity-70 z-20 "
         onClick={() => onSelected(null)}
       >
         <IoMdClose size={sizeIcon + 10} color={"black"} />
       </button>
-      <section className="text-black text-center flex flex-col gap-3 pt-8">
+      <section className="text-black text-center flex flex-col gap-2 md:gap-3 pt-4 md:pt-8">
         <Image
           src={thumbNailPath}
           alt={shop.name}

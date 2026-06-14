@@ -23,11 +23,10 @@ export default function ShopDetailFloat({
     <div
       className={`transition-all duration-300 ease-in-out
         absolute top-0 z-50 h-full
-        ${selectedShop ? "opacity-100 left-6 w-full" : "w-0 opacity-0 pointer-events-none -left-full"}
+       ${selectedShop ? "opacity-100 left-2 w-[calc(100%-3rem)]" : "w-0 opacity-0 pointer-events-none -left-full"}
         
         md:relative md:top-auto md:h-auto md:w-auto
         ${selectedShop ? "md:left-4" : "md:-left-96"}
-        
         `}
     >
       <FloatPage
@@ -38,8 +37,9 @@ export default function ShopDetailFloat({
         isSaved={localShopStorage.Save?.includes(selectedShop?.name ?? "")}
       />
       <button
-        className="absolute py-4 left-96 z-40 top-1/2 -translate-y-1/2 rounded-r-2xl bg-amber-600 
-        hover:cursor-pointer hover:bg-amber-700"
+       className="absolute py-4 right-0 translate-x-full z-40 top-1/2 -translate-y-1/2 rounded-r-2xl bg-amber-600 
+        hover:cursor-pointer hover:bg-amber-700 
+        " 
         onClick={() => onClose(null)}
       >
         <FaCaretLeft size={sizeIcon} color="white" />

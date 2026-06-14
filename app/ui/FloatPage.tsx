@@ -17,6 +17,9 @@ import { IoMdClose } from "react-icons/io";
 import { sizeIcon } from "../consts/const";
 import { ModeLocalStorage } from "../types/mode_types";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import OpeningHours from "./OpeningHours";
+import MenuList from "./MenuList";
+import ReviewsList from "./ReviewsList";
 
 interface FloatPageProps {
   shop: StoreData | null;
@@ -77,6 +80,8 @@ export default function FloatPage({
     [shop, openingStatus, isOpen],
   );
   const thumbNailPath = `/nextjs_places_images/shop_${shop.id}_thumbnail.jpg`;
+  const menuPath = `/nextjs_menues_images/shop_${shop.id}_menu_`;
+
   return (
     <div className="bg-amber-50 top-4 bottom-4 px-4 pt-4  w-96 absolute z-50 rounded-2xl overflow-y-auto flex flex-col">
       {/* Close Button */}
@@ -84,7 +89,7 @@ export default function FloatPage({
         className="absolute right-4 hover:cursor-pointer hover:opacity-70"
         onClick={() => onSelected(null)}
       >
-        <IoMdClose size={sizeIcon + 10} color={"black"}/>
+        <IoMdClose size={sizeIcon + 10} color={"black"} />
       </button>
       <section className="text-black text-center flex flex-col gap-3 pt-8">
         <Image
@@ -129,38 +134,11 @@ export default function FloatPage({
             />
           ))}
         </section>
-        {shop.opening_hours && shop.opening_hours.length > 0 && (
-          <section className="grid grid-cols-1 sm:grid-cols-7 gap-2 border-y-2 border-amber-400 py-3 my-2">
-            {shop.opening_hours.map((opening) => (
-              <div key={opening.day} className="flex flex-col items-center">
-                <span className="font-bold text-xs sm:text-sm">
-                  {opening.day.replace("วัน", "")}
-                </span>
-                <span className="text-xs text-gray-600">{opening.time}</span>
-              </div>
-            ))}
-          </section>
-        )}
+        <OpeningHours opening_hour={shop.opening_hours} />
+        {/* Menu */}
+        <MenuList menuItems={shop.menu_highlights} menuBasePath={menuPath} />
         {/**Reviews */}
-        <strong className="text-xl text-left pl-2">ตัวอย่าง Reviews</strong>
-        <div className="bottom-2 flex flex-col gap-2 p-2 text-left">
-          {shop.reviews?.map((comment, index) => (
-            <div
-              key={`review-${index}`}
-              className="w-full flex flex-col gap-2 mb-2"
-            >
-              <div className="flex gap-3 items-center">
-                <FaUser size={sizeIcon} color="orange" />
-                <p className="text-sm font-medium">
-                  ผู้ใช้ไม่ระบุตัวตน {index + 1}
-                </p>
-              </div>
-              <div className="bg-amber-300 rounded-2xl p-3 shadow-sm text-amber-900">
-                <span>{comment}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ReviewsList reviews={shop.reviews ?? []} />
       </section>
       {/* Button Hunted */}
       <div className="sticky bottom-0 z-10 bg-amber-50 px-2 py-4 mt-auto flex justify-center items-center">
